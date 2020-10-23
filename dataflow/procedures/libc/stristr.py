@@ -1,0 +1,18 @@
+import dataflow
+
+class stristr(dataflow.SimProcedure):
+    """
+    char *stristr(const char *haystack, const char *needle)
+    """
+
+    def run(self, haystack, needle):
+        if self.flow_dir == 'F' and self.purpose == 0:
+            return self.taint_propagate_to_ret(haystack)
+
+        else:
+            return 1
+
+    def infer_type(self, haystack, needle):
+        self.label_variable_type(haystack, 'ptr')
+        self.label_variable_type(needle, 'ptr')
+        self.label_return_type('ptr')

@@ -1,0 +1,551 @@
+{
+    "icall": {
+        "time": "3.836090",
+        "all_icall": 10,
+        "recovered_icall": 7,
+        "min_tartet_num": 2,
+        "max_tartet_num": 19,
+        "add_icall_target": 47
+    },
+    "taint_0": {
+        "time": "10.023760",
+        "all_functions": 249,
+        "analyzed_functions": 181,
+        "all_blocks": 5755,
+        "tainted_blocks": 795,
+        "tainted_sinks": 32,
+        "buffer_overflow_num": 15,
+        "command_exec_num": 2,
+        "buffer_overflow": {
+            "40f61c": {
+                "name": "sprintf",
+                "offset": [
+                    280
+                ],
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4257092
+            },
+            "40f4dc": {
+                "name": "sprintf",
+                "offset": [
+                    296
+                ],
+                "info": [
+                    3,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4256744
+            },
+            "40f4c8": {
+                "name": "sprintf",
+                "offset": [
+                    296
+                ],
+                "info": [
+                    3,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4256744
+            },
+            "40fbbc": {
+                "name": "sprintf",
+                "offset": [
+                    308
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4257436
+            },
+            "40fbf4": {
+                "name": "strcpy",
+                "offset": [
+                    308
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4257436
+            },
+            "40fc3c": {
+                "name": "sprintf",
+                "offset": [
+                    308
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4257436
+            },
+            "40b9d0": {
+                "name": "sprintf",
+                "offset": [
+                    1584
+                ],
+                "info": [
+                    1,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4239308
+            },
+            "40b890": {
+                "name": "sprintf",
+                "offset": [
+                    1584
+                ],
+                "info": [
+                    1,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4239308
+            },
+            "40aec5": {
+                "name": "sprintf",
+                "offset": [
+                    520
+                ],
+                "info": [
+                    2,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4238916
+            },
+            "40e310": {
+                "name": "sprintf",
+                "offset": [
+                    528
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4252504
+            },
+            "40e18c": {
+                "name": "sprintf",
+                "offset": [
+                    552
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4252504
+            },
+            "40e050": {
+                "name": "sprintf",
+                "offset": [
+                    552
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4252504
+            },
+            "40e0c0": {
+                "name": "sprintf",
+                "offset": [
+                    552
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4252504
+            },
+            "40b574": {
+                "name": "strncpy",
+                "offset": [
+                    2360
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4239308
+            },
+            "40b594": {
+                "name": "strncpy",
+                "offset": [
+                    2232
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4239308
+            }
+        },
+        "command_exec": {
+            "40dda8": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4250000
+            },
+            "40fc54": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4257436
+            }
+        },
+        "tained_length": {},
+        "sink_info": {
+            "strcpy": 1,
+            "strncpy": 2,
+            "memcpy": 0,
+            "memmove": 0,
+            "sprintf": 12,
+            "sscanf": 0,
+            "strcat": 0,
+            "strncat": 0,
+            "system": 2,
+            "popen": 0,
+            "execve": 0,
+            "_system": 0
+        }
+    },
+    "taint_1": {
+        "time": "18.854312",
+        "all_functions": 249,
+        "analyzed_functions": 195,
+        "all_blocks": 5869,
+        "tainted_blocks": 1046,
+        "tainted_sinks": 37,
+        "buffer_overflow_num": 19,
+        "command_exec_num": 2,
+        "buffer_overflow": {
+            "40a5ec": {
+                "name": "strcpy",
+                "offset": [
+                    2104,
+                    1716
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4236324
+            },
+            "40b9d0": {
+                "name": "sprintf",
+                "offset": [
+                    1584
+                ],
+                "info": [
+                    1,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4239308
+            },
+            "40b890": {
+                "name": "sprintf",
+                "offset": [
+                    1584
+                ],
+                "info": [
+                    1,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4239308
+            },
+            "40aec5": {
+                "name": "sprintf",
+                "offset": [
+                    520
+                ],
+                "info": [
+                    2,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4238916
+            },
+            "40d72c": {
+                "name": "sprintf",
+                "offset": [
+                    280
+                ],
+                "info": [
+                    4,
+                    1,
+                    2,
+                    0
+                ],
+                "func": 4249148
+            },
+            "40d5e4": {
+                "name": "sprintf",
+                "offset": [
+                    288
+                ],
+                "info": [
+                    5,
+                    1,
+                    3,
+                    0
+                ],
+                "func": 4248812
+            },
+            "40d5d0": {
+                "name": "sprintf",
+                "offset": [
+                    288
+                ],
+                "info": [
+                    5,
+                    1,
+                    3,
+                    0
+                ],
+                "func": 4248812
+            },
+            "40e310": {
+                "name": "sprintf",
+                "offset": [
+                    528
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4252504
+            },
+            "40e18c": {
+                "name": "sprintf",
+                "offset": [
+                    552
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4252504
+            },
+            "40e050": {
+                "name": "sprintf",
+                "offset": [
+                    552
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4252504
+            },
+            "40e0c0": {
+                "name": "sprintf",
+                "offset": [
+                    552
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4252504
+            },
+            "40f61c": {
+                "name": "sprintf",
+                "offset": [
+                    280
+                ],
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4257092
+            },
+            "40f4dc": {
+                "name": "sprintf",
+                "offset": [
+                    296
+                ],
+                "info": [
+                    3,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4256744
+            },
+            "40f4c8": {
+                "name": "sprintf",
+                "offset": [
+                    296
+                ],
+                "info": [
+                    3,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4256744
+            },
+            "40fbbc": {
+                "name": "sprintf",
+                "offset": [
+                    308
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4257436
+            },
+            "40fbf4": {
+                "name": "strcpy",
+                "offset": [
+                    308
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4257436
+            },
+            "40fc3c": {
+                "name": "sprintf",
+                "offset": [
+                    308
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4257436
+            },
+            "40b574": {
+                "name": "strncpy",
+                "offset": [
+                    2360
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4239308
+            },
+            "40b594": {
+                "name": "strncpy",
+                "offset": [
+                    2232
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4239308
+            }
+        },
+        "command_exec": {
+            "40dda8": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4250000
+            },
+            "40fc54": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4257436
+            }
+        },
+        "tained_length": {},
+        "sink_info": {
+            "strcpy": 2,
+            "strncpy": 2,
+            "memcpy": 0,
+            "memmove": 0,
+            "sprintf": 15,
+            "sscanf": 0,
+            "strcat": 0,
+            "strncat": 0,
+            "system": 2,
+            "popen": 0,
+            "execve": 0,
+            "_system": 0
+        }
+    }
+}
