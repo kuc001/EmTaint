@@ -1,0 +1,655 @@
+{
+    "icall": {
+        "time": "21.340306",
+        "all_icall": 43,
+        "recovered_icall": 41,
+        "min_tartet_num": 1,
+        "max_tartet_num": 89,
+        "add_icall_target": 182
+    },
+    "taint_0": {
+        "time": "30.986889",
+        "all_functions": 325,
+        "analyzed_functions": 273,
+        "all_blocks": 10756,
+        "tainted_blocks": 1556,
+        "tainted_sinks": 126,
+        "buffer_overflow_num": 13,
+        "command_exec_num": 0,
+        "buffer_overflow": {
+            "42ac10": {
+                "name": "sprintf",
+                "offset": [
+                    184
+                ],
+                "info": [
+                    7,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4368436
+            },
+            "42e88c": {
+                "name": "sprintf",
+                "offset": [
+                    1032
+                ],
+                "info": [
+                    5,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4378592
+            },
+            "42e4a4": {
+                "name": "sprintf",
+                "offset": [
+                    1032
+                ],
+                "info": [
+                    5,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4378592
+            },
+            "42e8a8": {
+                "name": "sprintf",
+                "offset": [
+                    968
+                ],
+                "info": [
+                    5,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4378592
+            },
+            "42e4d0": {
+                "name": "sprintf",
+                "offset": [
+                    968
+                ],
+                "info": [
+                    5,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4378592
+            },
+            "42b108": {
+                "name": "strcpy",
+                "offset": [
+                    64
+                ],
+                "info": [
+                    7,
+                    0,
+                    9,
+                    0
+                ],
+                "func": 4370132
+            },
+            "427ac8": {
+                "name": "sprintf",
+                "offset": [
+                    248
+                ],
+                "info": [
+                    7,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4355804
+            },
+            "42e228": {
+                "name": "strcpy",
+                "offset": [
+                    704
+                ],
+                "info": [
+                    5,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4378592
+            },
+            "42f0a4": {
+                "name": "sprintf",
+                "offset": [
+                    192
+                ],
+                "info": [
+                    5,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4378592
+            },
+            "42f0c4": {
+                "name": "sprintf",
+                "offset": [
+                    128
+                ],
+                "info": [
+                    5,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4378592
+            },
+            "426b00": {
+                "name": "memcpy",
+                "offset": [
+                    168
+                ],
+                "info": [
+                    6,
+                    0,
+                    4,
+                    0
+                ],
+                "func": 4352228
+            },
+            "426b30": {
+                "name": "memcpy",
+                "offset": [
+                    256,
+                    640,
+                    392,
+                    136,
+                    264,
+                    776,
+                    648,
+                    1424,
+                    1040,
+                    272,
+                    144,
+                    400,
+                    1432,
+                    1048,
+                    152,
+                    792,
+                    664,
+                    288,
+                    160,
+                    1064,
+                    808,
+                    1336,
+                    1080,
+                    824,
+                    696,
+                    192,
+                    1344,
+                    320,
+                    832,
+                    704,
+                    1352,
+                    840,
+                    712,
+                    328,
+                    1360,
+                    336,
+                    1368,
+                    88,
+                    728,
+                    120,
+                    1376,
+                    96,
+                    608,
+                    352,
+                    360,
+                    232,
+                    112,
+                    624,
+                    368,
+                    248
+                ],
+                "info": [
+                    6,
+                    0,
+                    5,
+                    0
+                ],
+                "func": 4352228
+            },
+            "4079a4": {
+                "name": "memcpy",
+                "offset": [
+                    1024
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4221328
+            }
+        },
+        "command_exec": {},
+        "tained_length": {},
+        "sink_info": {
+            "strcpy": 2,
+            "strncpy": 0,
+            "memcpy": 3,
+            "memmove": 0,
+            "sprintf": 8,
+            "sscanf": 0,
+            "strcat": 0,
+            "strncat": 0,
+            "system": 0,
+            "popen": 0,
+            "execve": 0,
+            "_system": 0
+        }
+    },
+    "taint_1": {
+        "time": "40.083531",
+        "all_functions": 325,
+        "analyzed_functions": 315,
+        "all_blocks": 11672,
+        "tainted_blocks": 1953,
+        "tainted_sinks": 149,
+        "buffer_overflow_num": 19,
+        "command_exec_num": 7,
+        "buffer_overflow": {
+            "42ac10": {
+                "name": "sprintf",
+                "offset": [
+                    184
+                ],
+                "info": [
+                    7,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4368436
+            },
+            "42e88c": {
+                "name": "sprintf",
+                "offset": [
+                    1032
+                ],
+                "info": [
+                    5,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4378592
+            },
+            "42e4a4": {
+                "name": "sprintf",
+                "offset": [
+                    1032
+                ],
+                "info": [
+                    5,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4378592
+            },
+            "42e8a8": {
+                "name": "sprintf",
+                "offset": [
+                    968
+                ],
+                "info": [
+                    5,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4378592
+            },
+            "42e4d0": {
+                "name": "sprintf",
+                "offset": [
+                    968
+                ],
+                "info": [
+                    5,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4378592
+            },
+            "42b108": {
+                "name": "strcpy",
+                "offset": [
+                    64
+                ],
+                "info": [
+                    7,
+                    0,
+                    9,
+                    0
+                ],
+                "func": 4370132
+            },
+            "427ac8": {
+                "name": "sprintf",
+                "offset": [
+                    248
+                ],
+                "info": [
+                    7,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4355804
+            },
+            "42e228": {
+                "name": "strcpy",
+                "offset": [
+                    704
+                ],
+                "info": [
+                    5,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4378592
+            },
+            "42f0a4": {
+                "name": "sprintf",
+                "offset": [
+                    192
+                ],
+                "info": [
+                    5,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4378592
+            },
+            "42f0c4": {
+                "name": "sprintf",
+                "offset": [
+                    128
+                ],
+                "info": [
+                    5,
+                    0,
+                    6,
+                    0
+                ],
+                "func": 4378592
+            },
+            "41a054": {
+                "name": "strcpy",
+                "offset": [
+                    1088
+                ],
+                "info": [
+                    8,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4299616
+            },
+            "4122c1": {
+                "name": "strcpy",
+                "offset": [
+                    1056
+                ],
+                "info": [
+                    9,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4268512
+            },
+            "40c82d": {
+                "name": "sprintf",
+                "offset": [
+                    56
+                ],
+                "info": [
+                    7,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4245272
+            },
+            "40c478": {
+                "name": "sprintf",
+                "offset": [
+                    48
+                ],
+                "info": [
+                    7,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4244380
+            },
+            "423ae9": {
+                "name": "sprintf",
+                "offset": [
+                    40
+                ],
+                "info": [
+                    10,
+                    3,
+                    3,
+                    0
+                ],
+                "func": 4340328
+            },
+            "409a40": {
+                "name": "strncpy",
+                "offset": [
+                    56
+                ],
+                "info": [
+                    3,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 4233632
+            },
+            "426b00": {
+                "name": "memcpy",
+                "offset": [
+                    168
+                ],
+                "info": [
+                    6,
+                    0,
+                    4,
+                    0
+                ],
+                "func": 4352228
+            },
+            "426b30": {
+                "name": "memcpy",
+                "offset": [
+                    256,
+                    640,
+                    392,
+                    136,
+                    264,
+                    776,
+                    648,
+                    1424,
+                    1040,
+                    272,
+                    144,
+                    400,
+                    1432,
+                    1048,
+                    152,
+                    792,
+                    664,
+                    288,
+                    160,
+                    1064,
+                    808,
+                    680,
+                    48,
+                    1336,
+                    1080,
+                    824,
+                    696,
+                    192,
+                    1344,
+                    320,
+                    832,
+                    704,
+                    1352,
+                    72,
+                    840,
+                    712,
+                    328,
+                    1360,
+                    336,
+                    1368,
+                    88,
+                    728,
+                    120,
+                    1376,
+                    96,
+                    608,
+                    352,
+                    360,
+                    232,
+                    104,
+                    112,
+                    624,
+                    368,
+                    248
+                ],
+                "info": [
+                    6,
+                    0,
+                    5,
+                    0
+                ],
+                "func": 4352228
+            },
+            "4079a4": {
+                "name": "memcpy",
+                "offset": [
+                    1024
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4221328
+            }
+        },
+        "command_exec": {
+            "40c860": {
+                "name": "_system",
+                "info": [
+                    7,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4245272
+            },
+            "410900": {
+                "name": "_system",
+                "info": [
+                    7,
+                    2,
+                    2,
+                    0
+                ],
+                "func": 4261688
+            },
+            "423b1c": {
+                "name": "_system",
+                "info": [
+                    10,
+                    3,
+                    3,
+                    0
+                ],
+                "func": 4340328
+            },
+            "40c4ac": {
+                "name": "system",
+                "info": [
+                    7,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4244380
+            },
+            "41ee58": {
+                "name": "_system",
+                "info": [
+                    10,
+                    3,
+                    2,
+                    0
+                ],
+                "func": 4320748
+            },
+            "41ecdc": {
+                "name": "_system",
+                "info": [
+                    10,
+                    3,
+                    2,
+                    0
+                ],
+                "func": 4320372
+            },
+            "40eadd": {
+                "name": "_system",
+                "info": [
+                    7,
+                    2,
+                    2,
+                    0
+                ],
+                "func": 4254268
+            }
+        },
+        "tained_length": {},
+        "sink_info": {
+            "strcpy": 4,
+            "strncpy": 1,
+            "memcpy": 3,
+            "memmove": 0,
+            "sprintf": 11,
+            "sscanf": 0,
+            "strcat": 0,
+            "strncat": 0,
+            "system": 1,
+            "popen": 0,
+            "execve": 0,
+            "_system": 6
+        }
+    }
+}

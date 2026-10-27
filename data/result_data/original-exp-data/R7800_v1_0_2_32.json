@@ -1,0 +1,1652 @@
+00{
+    "taint_1": {
+        "time": "88.911382",
+        "all_functions": 1351,
+        "analyzed_functions": 1286,
+        "all_blocks": 32262,
+        "tainted_blocks": 5217,
+        "tainted_sinks": 291,
+        "buffer_overflow_num": 98,
+        "command_exec_num": 21,
+        "buffer_overflow": {
+            "4b868": {
+                "name": "strcpy",
+                "offset": [
+                    880
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 309208
+            },
+            "470fc": {
+                "name": "strcpy",
+                "offset": [
+                    264
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 291024
+            },
+            "471cc": {
+                "name": "strcpy",
+                "offset": [
+                    272
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 291232
+            },
+            "57780": {
+                "name": "strcpy",
+                "offset": [
+                    200
+                ],
+                "info": [
+                    7,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 357904
+            },
+            "57748": {
+                "name": "sprintf",
+                "offset": [
+                    328
+                ],
+                "info": [
+                    7,
+                    1,
+                    7,
+                    0
+                ],
+                "func": 357904
+            },
+            "3ca20": {
+                "name": "sprintf",
+                "offset": [
+                    600
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 248064
+            },
+            "4daa4": {
+                "name": "sprintf",
+                "offset": [
+                    88
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 317956
+            },
+            "4a1ec": {
+                "name": "sprintf",
+                "offset": [
+                    408
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 303408
+            },
+            "4a258": {
+                "name": "sprintf",
+                "offset": [
+                    408
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 303408
+            },
+            "48660": {
+                "name": "strcpy",
+                "offset": [
+                    336
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 296468
+            },
+            "4dcc0": {
+                "name": "sprintf",
+                "offset": [
+                    88
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 318496
+            },
+            "4a108": {
+                "name": "sprintf",
+                "offset": [
+                    372
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 303232
+            },
+            "383d8": {
+                "name": "sprintf",
+                "offset": [
+                    312
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 230196
+            },
+            "35730": {
+                "name": "strcpy",
+                "offset": [
+                    112
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 218672
+            },
+            "3574c": {
+                "name": "strcpy",
+                "offset": [
+                    80
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 218672
+            },
+            "35768": {
+                "name": "strcpy",
+                "offset": [
+                    48
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 218672
+            },
+            "35858": {
+                "name": "strcpy",
+                "offset": [
+                    112
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 218672
+            },
+            "35874": {
+                "name": "strcpy",
+                "offset": [
+                    80
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 218672
+            },
+            "35890": {
+                "name": "strcpy",
+                "offset": [
+                    48
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 218672
+            },
+            "359a8": {
+                "name": "strcpy",
+                "offset": [
+                    112
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 218672
+            },
+            "359c4": {
+                "name": "strcpy",
+                "offset": [
+                    80
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 218672
+            },
+            "359e0": {
+                "name": "strcpy",
+                "offset": [
+                    48
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 218672
+            },
+            "35a94": {
+                "name": "strcpy",
+                "offset": [
+                    112
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 218672
+            },
+            "35ab0": {
+                "name": "strcpy",
+                "offset": [
+                    80
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 218672
+            },
+            "35acc": {
+                "name": "strcpy",
+                "offset": [
+                    48
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 218672
+            },
+            "388cc": {
+                "name": "strcpy",
+                "offset": [
+                    136
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 231484
+            },
+            "388e8": {
+                "name": "strcpy",
+                "offset": [
+                    104
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 231484
+            },
+            "38904": {
+                "name": "strcpy",
+                "offset": [
+                    72
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 231484
+            },
+            "3b4bc": {
+                "name": "sprintf",
+                "offset": [
+                    296
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 242748
+            },
+            "4ea84": {
+                "name": "strcpy",
+                "offset": [
+                    284
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 322124
+            },
+            "3b8b8": {
+                "name": "sprintf",
+                "offset": [
+                    336,
+                    272
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 243804
+            },
+            "3b920": {
+                "name": "strcpy",
+                "offset": [
+                    44
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 243916
+            },
+            "59b3c": {
+                "name": "sprintf",
+                "offset": [
+                    352
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 367204
+            },
+            "375c8": {
+                "name": "sprintf",
+                "offset": [
+                    396
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 226580
+            },
+            "37644": {
+                "name": "sprintf",
+                "offset": [
+                    396
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 226580
+            },
+            "584ec": {
+                "name": "sprintf",
+                "offset": [
+                    316
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 361580
+            },
+            "45078": {
+                "name": "sprintf",
+                "offset": [
+                    264,
+                    336
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 282608
+            },
+            "4a330": {
+                "name": "sprintf",
+                "offset": [
+                    600
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 303764
+            },
+            "4a384": {
+                "name": "sprintf",
+                "offset": [
+                    344
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 303764
+            },
+            "39358": {
+                "name": "strcpy",
+                "offset": [
+                    112
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 234184
+            },
+            "39374": {
+                "name": "strcpy",
+                "offset": [
+                    80
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 234184
+            },
+            "39390": {
+                "name": "strcpy",
+                "offset": [
+                    48
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 234184
+            },
+            "377d0": {
+                "name": "sprintf",
+                "offset": [
+                    716
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 227020
+            },
+            "37940": {
+                "name": "sprintf",
+                "offset": [
+                    716
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 227020
+            },
+            "37858": {
+                "name": "sprintf",
+                "offset": [
+                    460
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 227020
+            },
+            "54f60": {
+                "name": "sprintf",
+                "offset": [
+                    820
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 347872
+            },
+            "4a540": {
+                "name": "sprintf",
+                "offset": [
+                    296
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 304348
+            },
+            "50b38": {
+                "name": "sprintf",
+                "offset": [
+                    528
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 330472
+            },
+            "50b54": {
+                "name": "sprintf",
+                "offset": [
+                    272
+                ],
+                "info": [
+                    4,
+                    1,
+                    2,
+                    0
+                ],
+                "func": 330472
+            },
+            "4db54": {
+                "name": "sprintf",
+                "offset": [
+                    80
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 318196
+            },
+            "5a734": {
+                "name": "strcpy",
+                "offset": [
+                    584
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 370448
+            },
+            "5a740": {
+                "name": "strcpy",
+                "offset": [
+                    328
+                ],
+                "info": [
+                    4,
+                    1,
+                    2,
+                    0
+                ],
+                "func": 370448
+            },
+            "4853c": {
+                "name": "strcpy",
+                "offset": [
+                    264
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 296212
+            },
+            "37c78": {
+                "name": "sprintf",
+                "offset": [
+                    396
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 228004
+            },
+            "37d18": {
+                "name": "sprintf",
+                "offset": [
+                    396
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 228004
+            },
+            "38fe8": {
+                "name": "strcpy",
+                "offset": [
+                    128
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 233304
+            },
+            "39004": {
+                "name": "strcpy",
+                "offset": [
+                    96
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 233304
+            },
+            "39020": {
+                "name": "strcpy",
+                "offset": [
+                    64
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 233304
+            },
+            "48584": {
+                "name": "strcpy",
+                "offset": [
+                    264
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 296284
+            },
+            "3b3b8": {
+                "name": "sprintf",
+                "offset": [
+                    272
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 242536
+            },
+            "575f4": {
+                "name": "strcpy",
+                "offset": [
+                    272
+                ],
+                "info": [
+                    6,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 357736
+            },
+            "575b8": {
+                "name": "sprintf",
+                "offset": [
+                    144
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 357736
+            },
+            "4404c": {
+                "name": "sprintf",
+                "offset": [
+                    280
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 278424
+            },
+            "485f0": {
+                "name": "strcpy",
+                "offset": [
+                    336
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 296356
+            },
+            "5056c": {
+                "name": "sprintf",
+                "offset": [
+                    280
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 328728
+            },
+            "505bc": {
+                "name": "sprintf",
+                "offset": [
+                    280
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 328728
+            },
+            "50558": {
+                "name": "sprintf",
+                "offset": [
+                    280
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 328728
+            },
+            "38090": {
+                "name": "sprintf",
+                "offset": [
+                    328
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 229316
+            },
+            "382bc": {
+                "name": "sprintf",
+                "offset": [
+                    396
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 229832
+            },
+            "59cc4": {
+                "name": "sprintf",
+                "offset": [
+                    352
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 367564
+            },
+            "38c78": {
+                "name": "strcpy",
+                "offset": [
+                    136
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 232424
+            },
+            "38c94": {
+                "name": "strcpy",
+                "offset": [
+                    104
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 232424
+            },
+            "38cb0": {
+                "name": "strcpy",
+                "offset": [
+                    72
+                ],
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 232424
+            },
+            "57884": {
+                "name": "strcpy",
+                "offset": [
+                    340
+                ],
+                "info": [
+                    6,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 358312
+            },
+            "29eac": {
+                "name": "strcpy",
+                "offset": [
+                    200
+                ],
+                "info": [
+                    5,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 170928
+            },
+            "29cc8": {
+                "name": "strcpy",
+                "offset": [
+                    136
+                ],
+                "info": [
+                    5,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 170928
+            },
+            "28648": {
+                "name": "sprintf",
+                "offset": [
+                    552
+                ],
+                "info": [
+                    6,
+                    1,
+                    7,
+                    0
+                ],
+                "func": 165236
+            },
+            "2869c": {
+                "name": "sprintf",
+                "offset": [
+                    296
+                ],
+                "info": [
+                    6,
+                    1,
+                    7,
+                    0
+                ],
+                "func": 165236
+            },
+            "1bbd8": {
+                "name": "strcpy",
+                "offset": [
+                    124
+                ],
+                "info": [
+                    5,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 113608
+            },
+            "26e10": {
+                "name": "sprintf",
+                "offset": [
+                    448
+                ],
+                "info": [
+                    4,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 158760
+            },
+            "28da8": {
+                "name": "strcat",
+                "offset": [
+                    136
+                ],
+                "info": [
+                    5,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 166692
+            },
+            "28c14": {
+                "name": "strcpy",
+                "offset": [
+                    136
+                ],
+                "info": [
+                    5,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 166692
+            },
+            "5ddf0": {
+                "name": "strcpy",
+                "offset": [
+                    552
+                ],
+                "info": [
+                    4,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 382644
+            },
+            "5d860": {
+                "name": "strcpy",
+                "offset": [
+                    552
+                ],
+                "info": [
+                    4,
+                    1,
+                    7,
+                    0
+                ],
+                "func": 382644
+            },
+            "2d754": {
+                "name": "sprintf",
+                "offset": [
+                    224
+                ],
+                "info": [
+                    4,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 185644
+            },
+            "2f68c": {
+                "name": "strcpy",
+                "offset": [
+                    68
+                ],
+                "info": [
+                    5,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 194076
+            },
+            "2f6a4": {
+                "name": "strcpy",
+                "offset": [
+                    56
+                ],
+                "info": [
+                    5,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 194076
+            },
+            "2f890": {
+                "name": "strcpy",
+                "offset": [
+                    44
+                ],
+                "info": [
+                    5,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 194076
+            },
+            "15344": {
+                "name": "strcpy",
+                "offset": [
+                    1292
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 85308
+            },
+            "16b28": {
+                "name": "strcpy",
+                "offset": [
+                    1092
+                ],
+                "info": [
+                    8,
+                    2,
+                    1,
+                    0
+                ],
+                "func": 92892
+            },
+            "16b4c": {
+                "name": "strcpy",
+                "offset": [
+                    68
+                ],
+                "info": [
+                    8,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 92892
+            },
+            "17728": {
+                "name": "sprintf",
+                "offset": [
+                    144
+                ],
+                "info": [
+                    8,
+                    2,
+                    1,
+                    0
+                ],
+                "func": 95924
+            },
+            "176a0": {
+                "name": "sprintf",
+                "offset": [
+                    144
+                ],
+                "info": [
+                    8,
+                    2,
+                    1,
+                    0
+                ],
+                "func": 95852
+            },
+            "17774": {
+                "name": "sprintf",
+                "offset": [
+                    80
+                ],
+                "info": [
+                    8,
+                    2,
+                    1,
+                    0
+                ],
+                "func": 96064
+            },
+            "143e4": {
+                "name": "strcpy",
+                "offset": [
+                    204
+                ],
+                "info": [
+                    3,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 82892
+            },
+            "c298": {
+                "name": "strcpy",
+                "offset": [
+                    152
+                ],
+                "info": [
+                    3,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 49796
+            },
+            "c0b8": {
+                "name": "strcpy",
+                "offset": [
+                    288
+                ],
+                "info": [
+                    3,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 49316
+            },
+            "4bc20": {
+                "name": "sprintf",
+                "offset": [
+                    22076
+                ],
+                "info": [
+                    3,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 309552
+            }
+        },
+        "command_exec": {
+            "5df80": {
+                "name": "popen",
+                "info": [
+                    4,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 382644
+            },
+            "5dd04": {
+                "name": "popen",
+                "info": [
+                    4,
+                    1,
+                    7,
+                    0
+                ],
+                "func": 382644
+            },
+            "5de88": {
+                "name": "system",
+                "info": [
+                    4,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 382644
+            },
+            "3868c": {
+                "name": "system",
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 230920
+            },
+            "1ec8c": {
+                "name": "system",
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 125736
+            },
+            "5e114": {
+                "name": "popen",
+                "info": [
+                    4,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 382644
+            },
+            "ee18": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 58848
+            },
+            "5057c": {
+                "name": "system",
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 328728
+            },
+            "176a8": {
+                "name": "system",
+                "info": [
+                    8,
+                    2,
+                    1,
+                    0
+                ],
+                "func": 95852
+            },
+            "1777c": {
+                "name": "system",
+                "info": [
+                    8,
+                    2,
+                    1,
+                    0
+                ],
+                "func": 96064
+            },
+            "5e1b0": {
+                "name": "system",
+                "info": [
+                    4,
+                    1,
+                    7,
+                    0
+                ],
+                "func": 382644
+            },
+            "17730": {
+                "name": "system",
+                "info": [
+                    8,
+                    2,
+                    1,
+                    0
+                ],
+                "func": 95924
+            },
+            "138fc": {
+                "name": "system",
+                "info": [
+                    4,
+                    2,
+                    1,
+                    0
+                ],
+                "func": 79964
+            },
+            "5d2b8": {
+                "name": "system",
+                "info": [
+                    4,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 381376
+            },
+            "1e73c": {
+                "name": "system",
+                "info": [
+                    6,
+                    2,
+                    1,
+                    0
+                ],
+                "func": 124308
+            },
+            "50b40": {
+                "name": "system",
+                "info": [
+                    4,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 330472
+            },
+            "5d244": {
+                "name": "popen",
+                "info": [
+                    4,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 381376
+            },
+            "5e0c8": {
+                "name": "system",
+                "info": [
+                    4,
+                    1,
+                    6,
+                    0
+                ],
+                "func": 382644
+            },
+            "5dee4": {
+                "name": "popen",
+                "info": [
+                    4,
+                    1,
+                    7,
+                    0
+                ],
+                "func": 382644
+            },
+            "4bf74": {
+                "name": "system",
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 309552
+            },
+            "5e1fc": {
+                "name": "system",
+                "info": [
+                    4,
+                    1,
+                    7,
+                    0
+                ],
+                "func": 382644
+            }
+        },
+        "tained_length": {},
+        "sink_info": {
+            "strcpy": 53,
+            "strncpy": 0,
+            "memcpy": 0,
+            "memmove": 0,
+            "sprintf": 44,
+            "sscanf": 0,
+            "strcat": 1,
+            "strncat": 0,
+            "system": 16,
+            "popen": 5,
+            "execve": 0,
+            "_system": 0
+        }
+    },
+    "icall": {
+        "time": "34.373783",
+        "all_icall": 17,
+        "recovered_icall": 14,
+        "min_tartet_num": 1,
+        "max_tartet_num": 286,
+        "add_icall_target": 692
+    },
+    "taint_0": {
+        "time": "52.658736",
+        "all_functions": 1351,
+        "analyzed_functions": 1065,
+        "all_blocks": 29640,
+        "tainted_blocks": 2382,
+        "tainted_sinks": 118,
+        "buffer_overflow_num": 6,
+        "command_exec_num": 2,
+        "buffer_overflow": {
+            "470fc": {
+                "name": "strcpy",
+                "offset": [
+                    264
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 291024
+            },
+            "3ca20": {
+                "name": "sprintf",
+                "offset": [
+                    600
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 248064
+            },
+            "471cc": {
+                "name": "strcpy",
+                "offset": [
+                    272
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 291232
+            },
+            "4b868": {
+                "name": "strcpy",
+                "offset": [
+                    880
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 309208
+            },
+            "15344": {
+                "name": "strcpy",
+                "offset": [
+                    1292
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 85308
+            },
+            "4bc20": {
+                "name": "sprintf",
+                "offset": [
+                    22076
+                ],
+                "info": [
+                    3,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 309552
+            }
+        },
+        "command_exec": {
+            "ee18": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 58848
+            },
+            "4bf74": {
+                "name": "system",
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 309552
+            }
+        },
+        "tained_length": {},
+        "sink_info": {
+            "strcpy": 4,
+            "strncpy": 0,
+            "memcpy": 0,
+            "memmove": 0,
+            "sprintf": 2,
+            "sscanf": 0,
+            "strcat": 0,
+            "strncat": 0,
+            "system": 2,
+            "popen": 0,
+            "execve": 0,
+            "_system": 0
+        }
+    }
+}

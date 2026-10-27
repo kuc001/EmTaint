@@ -603,7 +603,10 @@ class SimProcedure:
 
         cons_values = []
         cons_expr = None
-        if constraint and len(taint_cons_exprs) == 0:
+        # print("constrain: %s" % (constraint))
+        # print("taint_cons_expr: %s" % (taint_cons_exprs))
+        # if constraint and len(taint_cons_exprs) == 0:
+        if constraint:
             cons_values, cons_expr = self.get_constraint(constraint, cons_type=3)
 
         if len(taint_cons_exprs):
@@ -615,6 +618,7 @@ class SimProcedure:
                         weaks_only_length[self.block.addr].append(taint_cons_expr)
 
         # print("Cons- values: %s cons_expr: %s" % (cons_values, cons_expr))
+        # print("New-exprs: %s" % (new_exprs))
         # if len(new_exprs) and self.display_name == 'strcpy':
         #     print("Lucky, find tainted strcpy in %s" % (self.block))
 
@@ -637,9 +641,13 @@ class SimProcedure:
                         new_expr.constraints.append(c)
 
                 # Why???
+                # for bexpr in pre_block.backward_exprs:
+                #     print("B-expr: %s" % (bexpr))
                 if len(cons_values) and not copy_len_taint:
+                    # print("Pass!!!")
                     pass
                 elif new_expr.expr.data_type == 'Tdata' and cons_expr is not None and cons_expr not in pre_block.backward_exprs:
+                    # print("@@-> Add constraint expr: %s to %s" % (cons_expr, pre_block))
                     cons_expr.index = last_index
                     pre_block.backward_exprs.append(cons_expr)
                     new_expr.cons_ids.append(cons_expr.expr.alias_id)

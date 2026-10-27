@@ -503,11 +503,11 @@ class FastSearch(BinaryInfo):
 
         self.collector.analyzed_functions.add(funcea)
 
-        if self.taint_check:
-            print("\nGTaint in %s" % (function))
-            for base_addr, taint_exprs in function.input_global_taints.items():
-                for g_taint_expr in taint_exprs:
-                    print(" -->global-taint: %x %s %s" % (base_addr, g_taint_expr, g_taint_expr.constraints))
+        # if self.taint_check:
+        #     print("\nGTaint in %s" % (function))
+        #     for base_addr, taint_exprs in function.input_global_taints.items():
+        #         for g_taint_expr in taint_exprs:
+        #             print(" -->global-taint: %x %s %s" % (base_addr, g_taint_expr, g_taint_expr.constraints))
             # if len(function.input_global_taints) > 300:
             #     print("Too many tiants")
             #     debug
@@ -1213,7 +1213,7 @@ class FastSearch(BinaryInfo):
 
         # print("Collect analysis results in function: %s" % (function))
         for trace_expr in start_node.done_exprs:
-            print("start node-%x has: %s" % (start_node.addr, trace_expr))
+            # print("start node-%x has: %s" % (start_node.addr, trace_expr))
             if trace_expr.expr.trace_dir != 'B':
                 continue
 
@@ -1318,7 +1318,7 @@ class FastSearch(BinaryInfo):
                 sims = trace_expr.expr.sims
                 ast = trace_expr.expr.ast
                 pattern, data_type = trace_expr.expr.pattern, trace_expr.expr.data_type
-                print("Ret-node-%x: has %s %s %s" % (block.addr, trace_expr, sims, data_type))
+                # print("Ret-node-%x: has %s %s %s" % (block.addr, trace_expr, sims, data_type))
 
                 if len(sims) == 1 and self.ret_name in sims and sims[self.ret_name].live:
                     if data_type == 'Aptr' and ast.op == 'Store':
@@ -3034,7 +3034,7 @@ class FastSearch(BinaryInfo):
                     new_expr.inter_funcs.append('%x' % (callsite.func_addr))
                     if callsite.node_type == 'iCall':
                         new_expr.inter_icall_level += 1
-                    print("Push-ret-%x %s taint-source:%x %s" % (succ_block.addr, new_expr, new_expr.expr.taint_source, new_expr.inter_funcs))
+                    # print("Push-ret-%x %s taint-source:%x %s" % (succ_block.addr, new_expr, new_expr.expr.taint_source, new_expr.inter_funcs))
 
     def _push_use_to_callsite(self, callsite, argument_exprs):
         """
@@ -3748,7 +3748,7 @@ class FastSearch(BinaryInfo):
         callsite_arg_info = {}
         arguments = callee_function.arguments
         forward_exprs = callsite.forward_exprs
-        print("callsite %s has %s" % (callee_function, arguments))
+        # print("callsite %s has %s" % (callee_function, arguments))
 
         for trace_expr in forward_exprs:
             if trace_expr.expr.source.block_addr == callsite.addr:
@@ -4104,8 +4104,8 @@ class FastSearch(BinaryInfo):
         if self.taint_check:
             # print("xxx-> %s" % (callsite.forward_exprs))
             callsite_taint_exprs = self._get_argument_taint_info(callsite, callee_function, call_type='main')
-            for cs_taint in callsite_taint_exprs:
-                print("ooo-> %s 0x%x %s" % (cs_taint, cs_taint.expr.taint_source, cs_taint.inter_funcs))
+            # for cs_taint in callsite_taint_exprs:
+            #     print("ooo-> %s 0x%x %s" % (cs_taint, cs_taint.expr.taint_source, cs_taint.inter_funcs))
             if len(caller_function.input_global_taints):
                 callee_function.merge_input_global_taints_v1(callsite, caller_function.input_global_taints)
             if len(callsite_taint_exprs):
@@ -4152,8 +4152,8 @@ class FastSearch(BinaryInfo):
         if len(callee_function.taint_exprs):
             remove_exprs = []
             callee_taint_exprs = callee_function.get_taint_exprs(caller_function, callsite_taint_exprs)
-            for t_expr in callee_taint_exprs:
-                print("  -->%x has taint exprs (main):\n %s %s" % (callee_function.addr, t_expr, t_expr.inter_funcs))
+            # for t_expr in callee_taint_exprs:
+            #     print("  -->%x has taint exprs (main):\n %s %s" % (callee_function.addr, t_expr, t_expr.inter_funcs))
             for taint_expr in callee_taint_exprs:
                 # if not taint_expr.expr.is_ret and taint_expr in callsite_taint_exprs:
                 #     remove_exprs.append(taint_expr)
@@ -5015,7 +5015,7 @@ class FastSearch(BinaryInfo):
         trace_flag = 0
 
         # if function.addr == 0x1200955D4:
-        print("\nDEBUG-%s%s-%x %s\n" % (flow_dir, flow_dir, block.addr, block))
+        # print("\nDEBUG-%s%s-%x %s\n" % (flow_dir, flow_dir, block.addr, block))
         # if block.irsb: block.irsb.pp()
 
         ret_exprs = self.collector.datas['Ret'].get(0x4032a8)
@@ -5067,15 +5067,15 @@ class FastSearch(BinaryInfo):
                 if (len(block.forward_exprs) or
                         (func_name and func_name in self._sim_procedures and self.taint_check) or
                         (len(function.input_global_taints) and function.trace_dir == 'F')):
-                    print("Forward-call-0x%x -> %s with function-flag %d" % (block.addr, callee_function, callee_function.flag))
+                    # print("Forward-call-0x%x -> %s with function-flag %d" % (block.addr, callee_function, callee_function.flag))
                     check_forward_ret = self._process_callee_function_in_forward(block, function, callee_function, loop, flow_dir)
                     if flow_dir == 'F':
                         self._pre_execute_callsite(function, block, loop, flow_dir)
 
                 if len(block.backward_exprs):
-                    print("Backward-call-0x%x -> %s with function-flag %d" % (block.addr, callee_function, callee_function.flag))
+                    # print("Backward-call-0x%x -> %s with function-flag %d" % (block.addr, callee_function, callee_function.flag))
                     parameter_ptrs = predict_parameter_pointer_in_backward(block)
-                    print("Predict-paras-%x: %s" % (block.addr, parameter_ptrs))
+                    # print("Predict-paras-%x: %s" % (block.addr, parameter_ptrs))
                     check_backward_ret = self._process_callee_function_in_backward(block, function, callee_function, parameter_ptrs, loop, flow_dir)
 
                 if self.taint_check:
@@ -5812,7 +5812,7 @@ class FastSearch(BinaryInfo):
         expr_guard = trace_expr.guard
         if src.addr in dst.guard:
             jmp_guard = dst.guard[src.addr]
-            print("  %s has %s jmp-guard %s" % (trace_expr, expr_guard, jmp_guard))
+            # print("  %s has %s jmp-guard %s" % (trace_expr, expr_guard, jmp_guard))
             if expr_guard.op != jmp_guard.op and expr_guard.args[0].__hash__() == jmp_guard.args[0].__hash__():
                 return False
         return True
@@ -5928,7 +5928,7 @@ class FastSearch(BinaryInfo):
         :param callsite: a block which has a call will return value to ret register.
         :param callee_function: the callee function which return value.
         """
-        print("Update-ret in %s -> %s" % (callsite, callee_function))
+        # print("Update-ret in %s -> %s" % (callsite, callee_function))
         killed_exprs = []
         new_backward_exprs = []
         get_ret_flag = False
@@ -6129,7 +6129,7 @@ class FastSearch(BinaryInfo):
         :param loop: a intance of calss Loop
         """
         if loop.analyzed_times > MAX_LOOPS:
-            print("W-Loop-b %s execed %d" % (loop, MAX_LOOPS))
+            # print("W-Loop-b %s execed %d" % (loop, MAX_LOOPS))
             return
 
         # print("DEBUG: process loop:\n%s" % (loop))

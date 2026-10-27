@@ -1,0 +1,3418 @@
+{
+    "icall": {
+        "time": "37.668637",
+        "all_icall": 51,
+        "recovered_icall": 48,
+        "min_tartet_num": 1,
+        "max_tartet_num": 122,
+        "add_icall_target": 381
+    },
+    "taint_0": {
+        "time": "49.550720",
+        "all_functions": 903,
+        "analyzed_functions": 557,
+        "all_blocks": 21348,
+        "tainted_blocks": 2788,
+        "tainted_sinks": 286,
+        "buffer_overflow_num": 85,
+        "command_exec_num": 57,
+        "buffer_overflow": {
+            "439998": {
+                "name": "strcpy",
+                "offset": [
+                    292
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4429876
+            },
+            "439a00": {
+                "name": "strcpy",
+                "offset": [
+                    280
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4429876
+            },
+            "42c0e8": {
+                "name": "sprintf",
+                "offset": [
+                    144
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374644
+            },
+            "41083c": {
+                "name": "strcpy",
+                "offset": [
+                    264
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4260004
+            },
+            "48270c": {
+                "name": "strcpy",
+                "offset": [
+                    140
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4728492
+            },
+            "4827a0": {
+                "name": "strcpy",
+                "offset": [
+                    268
+                ],
+                "info": [
+                    1,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4728492
+            },
+            "42b620": {
+                "name": "strcpy",
+                "offset": [
+                    1036
+                ],
+                "info": [
+                    3,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4371612
+            },
+            "42b664": {
+                "name": "sprintf",
+                "offset": [
+                    2064
+                ],
+                "info": [
+                    3,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4371612
+            },
+            "43a27c": {
+                "name": "strcpy",
+                "offset": [
+                    396
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4432160
+            },
+            "42c1c0": {
+                "name": "sprintf",
+                "offset": [
+                    144
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374860
+            },
+            "42c284": {
+                "name": "sprintf",
+                "offset": [
+                    144
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374860
+            },
+            "45632c": {
+                "name": "sprintf",
+                "offset": [
+                    536
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4546952
+            },
+            "456364": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4546952
+            },
+            "456448": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4546952
+            },
+            "440a98": {
+                "name": "sprintf",
+                "offset": [
+                    148
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4458932
+            },
+            "42e68c": {
+                "name": "strcpy",
+                "offset": [
+                    1336
+                ],
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4383868
+            },
+            "427d00": {
+                "name": "strcat",
+                "offset": [
+                    4104
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4356624
+            },
+            "444d6c": {
+                "name": "sprintf",
+                "offset": [
+                    264
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4475432
+            },
+            "4293b0": {
+                "name": "strcpy",
+                "offset": [
+                    140
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4362808
+            },
+            "4294d0": {
+                "name": "sprintf",
+                "offset": [
+                    76
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4362808
+            },
+            "42952c": {
+                "name": "sprintf",
+                "offset": [
+                    76
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4362808
+            },
+            "442af0": {
+                "name": "sprintf",
+                "offset": [
+                    76
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4467280
+            },
+            "439630": {
+                "name": "sprintf",
+                "offset": [
+                    548
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4428424
+            },
+            "406d4c": {
+                "name": "strcpy",
+                "offset": [
+                    140
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4221652
+            },
+            "406a74": {
+                "name": "strcpy",
+                "offset": [
+                    140
+                ],
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4221408
+            },
+            "440c08": {
+                "name": "sprintf",
+                "offset": [
+                    148
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4459300
+            },
+            "42fa3c": {
+                "name": "strcpy",
+                "offset": [
+                    1336
+                ],
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4388924
+            },
+            "42fb40": {
+                "name": "sprintf",
+                "offset": [
+                    136
+                ],
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4388924
+            },
+            "447628": {
+                "name": "strcpy",
+                "offset": [
+                    6236
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4485940
+            },
+            "447bc0": {
+                "name": "sprintf",
+                "offset": [
+                    6220
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4485940
+            },
+            "434490": {
+                "name": "strcpy",
+                "offset": [
+                    20
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4408272
+            },
+            "442d24": {
+                "name": "sprintf",
+                "offset": [
+                    76
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4467844
+            },
+            "438e44": {
+                "name": "sprintf",
+                "offset": [
+                    480
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4426940
+            },
+            "4ae2dc": {
+                "name": "strcpy",
+                "offset": [
+                    1924
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4907504
+            },
+            "436624": {
+                "name": "sprintf",
+                "offset": [
+                    2064
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4416732
+            },
+            "438828": {
+                "name": "sprintf",
+                "offset": [
+                    488
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4425100
+            },
+            "426ac4": {
+                "name": "sprintf",
+                "offset": [
+                    96
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4352608
+            },
+            "426b4c": {
+                "name": "sprintf",
+                "offset": [
+                    96
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4352608
+            },
+            "424768": {
+                "name": "sprintf",
+                "offset": [
+                    136
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4343264
+            },
+            "429dbc": {
+                "name": "sprintf",
+                "offset": [
+                    268
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4364876
+            },
+            "455f04": {
+                "name": "sprintf",
+                "offset": [
+                    532
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4546164
+            },
+            "455f3c": {
+                "name": "sprintf",
+                "offset": [
+                    272
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4546164
+            },
+            "429014": {
+                "name": "strcpy",
+                "offset": [
+                    140
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4361884
+            },
+            "429134": {
+                "name": "sprintf",
+                "offset": [
+                    76
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4361884
+            },
+            "429190": {
+                "name": "sprintf",
+                "offset": [
+                    76
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4361884
+            },
+            "4437f4": {
+                "name": "sprintf",
+                "offset": [
+                    84
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4468408
+            },
+            "4433a8": {
+                "name": "sprintf",
+                "offset": [
+                    84
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4468408
+            },
+            "44708c": {
+                "name": "sprintf",
+                "offset": [
+                    272
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4484824
+            },
+            "447148": {
+                "name": "sprintf",
+                "offset": [
+                    272
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4484824
+            },
+            "433e34": {
+                "name": "sprintf",
+                "offset": [
+                    148
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4406396
+            },
+            "434208": {
+                "name": "strcpy",
+                "offset": [
+                    560
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4407036
+            },
+            "48a5dc": {
+                "name": "sprintf",
+                "offset": [
+                    420
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4760920
+            },
+            "43eee4": {
+                "name": "sprintf",
+                "offset": [
+                    264
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4451804
+            },
+            "43dd54": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43ddd0": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43de4c": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43dec8": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43df44": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43dfc0": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43daf4": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e2b0": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e32c": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e3a8": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e6f0": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e76c": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e7e8": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43c9ac": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43ca28": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43caa4": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cb80": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cbfc": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cc78": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43c74c": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cf08": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cf84": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43d000": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43d348": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43d3c4": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43d440": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43bc80": {
+                "name": "sprintf",
+                "offset": [
+                    148
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4438844
+            },
+            "43bad0": {
+                "name": "sprintf",
+                "offset": [
+                    144
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4438392
+            },
+            "4427d4": {
+                "name": "sprintf",
+                "offset": [
+                    72
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4466484
+            },
+            "42c010": {
+                "name": "sprintf",
+                "offset": [
+                    144
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374428
+            },
+            "48c4d4": {
+                "name": "sprintf",
+                "offset": [
+                    56
+                ],
+                "info": [
+                    3,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4768008
+            },
+            "424950": {
+                "name": "sprintf",
+                "offset": [
+                    136
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4343752
+            }
+        },
+        "command_exec": {
+            "43ef04": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4451804
+            },
+            "43d460": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "42c108": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374644
+            },
+            "424788": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4343264
+            },
+            "43e808": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e78c": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43d28c": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "456390": {
+                "name": "popen",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4546952
+            },
+            "436490": {
+                "name": "_system",
+                "info": [
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "func": 4415972
+            },
+            "43e710": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43db14": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "426b98": {
+                "name": "popen",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4352608
+            },
+            "43cc98": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cc1c": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43e4a0": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43cba0": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43d020": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "42c2a4": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374860
+            },
+            "43cfa4": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43d368": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cf28": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "4363b0": {
+                "name": "_system",
+                "info": [
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "func": 4415972
+            },
+            "42c030": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374428
+            },
+            "43d1c0": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43b144": {
+                "name": "system",
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4435576
+            },
+            "43cac4": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43e3c8": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43ca48": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43e34c": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43c9cc": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43e2d0": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "429154": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4361884
+            },
+            "429ddc": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4364876
+            },
+            "444ddc": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4475432
+            },
+            "42c1e0": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374860
+            },
+            "4363e0": {
+                "name": "_system",
+                "info": [
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "func": 4415972
+            },
+            "42fb60": {
+                "name": "system",
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4388924
+            },
+            "43dfe0": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "426ae4": {
+                "name": "system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4352608
+            },
+            "43df64": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43d0f8": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43d3e4": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "456468": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4546952
+            },
+            "45cae8": {
+                "name": "system",
+                "info": [
+                    2,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4573216
+            },
+            "455f68": {
+                "name": "popen",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4546164
+            },
+            "43dee8": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "4397ec": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4428424
+            },
+            "426b6c": {
+                "name": "system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4352608
+            },
+            "43de6c": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e568": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "4294f0": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4362808
+            },
+            "43ddf0": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43c76c": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cd6c": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43dd74": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "424970": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4343752
+            },
+            "42b778": {
+                "name": "system",
+                "info": [
+                    3,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4371612
+            }
+        },
+        "tained_length": {},
+        "sink_info": {
+            "strcpy": 17,
+            "strncpy": 0,
+            "memcpy": 0,
+            "memmove": 0,
+            "sprintf": 67,
+            "sscanf": 0,
+            "strcat": 1,
+            "strncat": 0,
+            "system": 18,
+            "popen": 3,
+            "execve": 0,
+            "_system": 36
+        }
+    },
+    "taint_1": {
+        "time": "58.195288",
+        "all_functions": 903,
+        "analyzed_functions": 622,
+        "all_blocks": 22714,
+        "tainted_blocks": 2860,
+        "tainted_sinks": 289,
+        "buffer_overflow_num": 85,
+        "command_exec_num": 57,
+        "buffer_overflow": {
+            "429dbc": {
+                "name": "sprintf",
+                "offset": [
+                    268
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4364876
+            },
+            "4ae2dc": {
+                "name": "strcpy",
+                "offset": [
+                    1924
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4907504
+            },
+            "42b620": {
+                "name": "strcpy",
+                "offset": [
+                    1036
+                ],
+                "info": [
+                    3,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4371612
+            },
+            "42b664": {
+                "name": "sprintf",
+                "offset": [
+                    2064
+                ],
+                "info": [
+                    3,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4371612
+            },
+            "433e34": {
+                "name": "sprintf",
+                "offset": [
+                    148
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4406396
+            },
+            "434208": {
+                "name": "strcpy",
+                "offset": [
+                    560
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4407036
+            },
+            "424768": {
+                "name": "sprintf",
+                "offset": [
+                    136
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4343264
+            },
+            "436624": {
+                "name": "sprintf",
+                "offset": [
+                    2064
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4416732
+            },
+            "434490": {
+                "name": "strcpy",
+                "offset": [
+                    20
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4408272
+            },
+            "424950": {
+                "name": "sprintf",
+                "offset": [
+                    136
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4343752
+            },
+            "426ac4": {
+                "name": "sprintf",
+                "offset": [
+                    96
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4352608
+            },
+            "426b4c": {
+                "name": "sprintf",
+                "offset": [
+                    96
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4352608
+            },
+            "438e44": {
+                "name": "sprintf",
+                "offset": [
+                    480
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4426940
+            },
+            "440a98": {
+                "name": "sprintf",
+                "offset": [
+                    148
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4458932
+            },
+            "42e68c": {
+                "name": "strcpy",
+                "offset": [
+                    1336
+                ],
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4383868
+            },
+            "4437f4": {
+                "name": "sprintf",
+                "offset": [
+                    84
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4468408
+            },
+            "4433a8": {
+                "name": "sprintf",
+                "offset": [
+                    84
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4468408
+            },
+            "42c010": {
+                "name": "sprintf",
+                "offset": [
+                    144
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374428
+            },
+            "429014": {
+                "name": "strcpy",
+                "offset": [
+                    140
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4361884
+            },
+            "429134": {
+                "name": "sprintf",
+                "offset": [
+                    76
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4361884
+            },
+            "429190": {
+                "name": "sprintf",
+                "offset": [
+                    76
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4361884
+            },
+            "438828": {
+                "name": "sprintf",
+                "offset": [
+                    488
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4425100
+            },
+            "439630": {
+                "name": "sprintf",
+                "offset": [
+                    548
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4428424
+            },
+            "442d24": {
+                "name": "sprintf",
+                "offset": [
+                    76
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4467844
+            },
+            "42c0e8": {
+                "name": "sprintf",
+                "offset": [
+                    144
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374644
+            },
+            "442af0": {
+                "name": "sprintf",
+                "offset": [
+                    76
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4467280
+            },
+            "42c1c0": {
+                "name": "sprintf",
+                "offset": [
+                    144
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374860
+            },
+            "42c284": {
+                "name": "sprintf",
+                "offset": [
+                    144
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374860
+            },
+            "4293b0": {
+                "name": "strcpy",
+                "offset": [
+                    140
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4362808
+            },
+            "4294d0": {
+                "name": "sprintf",
+                "offset": [
+                    76
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4362808
+            },
+            "42952c": {
+                "name": "sprintf",
+                "offset": [
+                    76
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4362808
+            },
+            "4427d4": {
+                "name": "sprintf",
+                "offset": [
+                    72
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4466484
+            },
+            "439998": {
+                "name": "strcpy",
+                "offset": [
+                    292
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4429876
+            },
+            "439a00": {
+                "name": "strcpy",
+                "offset": [
+                    280
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4429876
+            },
+            "440c08": {
+                "name": "sprintf",
+                "offset": [
+                    148
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4459300
+            },
+            "42fa3c": {
+                "name": "strcpy",
+                "offset": [
+                    1336
+                ],
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4388924
+            },
+            "42fb40": {
+                "name": "sprintf",
+                "offset": [
+                    136
+                ],
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4388924
+            },
+            "43a27c": {
+                "name": "strcpy",
+                "offset": [
+                    396
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4432160
+            },
+            "427d00": {
+                "name": "strcat",
+                "offset": [
+                    4104
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4356624
+            },
+            "48a5dc": {
+                "name": "sprintf",
+                "offset": [
+                    420
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4760920
+            },
+            "48270c": {
+                "name": "strcpy",
+                "offset": [
+                    140
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4728492
+            },
+            "4827a0": {
+                "name": "strcpy",
+                "offset": [
+                    268
+                ],
+                "info": [
+                    1,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4728492
+            },
+            "455f04": {
+                "name": "sprintf",
+                "offset": [
+                    532
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4546164
+            },
+            "455f3c": {
+                "name": "sprintf",
+                "offset": [
+                    272
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4546164
+            },
+            "45632c": {
+                "name": "sprintf",
+                "offset": [
+                    536
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4546952
+            },
+            "456364": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4546952
+            },
+            "456448": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4546952
+            },
+            "48c4d4": {
+                "name": "sprintf",
+                "offset": [
+                    56
+                ],
+                "info": [
+                    3,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4768008
+            },
+            "43eee4": {
+                "name": "sprintf",
+                "offset": [
+                    264
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4451804
+            },
+            "43dd54": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43ddd0": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43de4c": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43dec8": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43df44": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43dfc0": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43daf4": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e2b0": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e32c": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e3a8": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e6f0": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e76c": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e7e8": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43c9ac": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43ca28": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43caa4": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cb80": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cbfc": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cc78": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43c74c": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cf08": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cf84": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43d000": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43d348": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43d3c4": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43d440": {
+                "name": "sprintf",
+                "offset": [
+                    276
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43bc80": {
+                "name": "sprintf",
+                "offset": [
+                    148
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4438844
+            },
+            "43bad0": {
+                "name": "sprintf",
+                "offset": [
+                    144
+                ],
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4438392
+            },
+            "44708c": {
+                "name": "sprintf",
+                "offset": [
+                    272
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4484824
+            },
+            "447148": {
+                "name": "sprintf",
+                "offset": [
+                    272
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4484824
+            },
+            "447628": {
+                "name": "strcpy",
+                "offset": [
+                    6236
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4485940
+            },
+            "447bc0": {
+                "name": "sprintf",
+                "offset": [
+                    6220
+                ],
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4485940
+            },
+            "41083c": {
+                "name": "strcpy",
+                "offset": [
+                    264
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4260004
+            },
+            "406d4c": {
+                "name": "strcpy",
+                "offset": [
+                    140
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4221652
+            },
+            "406a74": {
+                "name": "strcpy",
+                "offset": [
+                    140
+                ],
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4221408
+            },
+            "444d6c": {
+                "name": "sprintf",
+                "offset": [
+                    264
+                ],
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4475432
+            }
+        },
+        "command_exec": {
+            "4363e0": {
+                "name": "_system",
+                "info": [
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "func": 4415972
+            },
+            "43ef04": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4451804
+            },
+            "424788": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4343264
+            },
+            "42c108": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374644
+            },
+            "43e808": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e78c": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43d28c": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "456390": {
+                "name": "popen",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4546952
+            },
+            "43e710": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "436490": {
+                "name": "_system",
+                "info": [
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "func": 4415972
+            },
+            "43db14": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "426b98": {
+                "name": "popen",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4352608
+            },
+            "43cc98": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cc1c": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43e4a0": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43cba0": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43d020": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "42c2a4": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374860
+            },
+            "43cfa4": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43d368": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43cf28": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "42c030": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374428
+            },
+            "4363b0": {
+                "name": "_system",
+                "info": [
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "func": 4415972
+            },
+            "43d1c0": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43b144": {
+                "name": "system",
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4435576
+            },
+            "43cac4": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43e3c8": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43ca48": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43e34c": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43c9cc": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43e2d0": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "429154": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4361884
+            },
+            "429ddc": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4364876
+            },
+            "444ddc": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4475432
+            },
+            "42c1e0": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4374860
+            },
+            "42fb60": {
+                "name": "system",
+                "info": [
+                    2,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4388924
+            },
+            "43dfe0": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43d0f8": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "426ae4": {
+                "name": "system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4352608
+            },
+            "43df64": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43d3e4": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43d460": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "45cae8": {
+                "name": "system",
+                "info": [
+                    2,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4573216
+            },
+            "455f68": {
+                "name": "popen",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4546164
+            },
+            "456468": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4546952
+            },
+            "43dee8": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "426b6c": {
+                "name": "system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4352608
+            },
+            "4397ec": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4428424
+            },
+            "43de6c": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43e568": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "424970": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4343752
+            },
+            "4294f0": {
+                "name": "system",
+                "info": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "func": 4362808
+            },
+            "43ddf0": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43c76c": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "43dd74": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4446196
+            },
+            "43cd6c": {
+                "name": "_system",
+                "info": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "func": 4441164
+            },
+            "42b778": {
+                "name": "system",
+                "info": [
+                    3,
+                    0,
+                    3,
+                    0
+                ],
+                "func": 4371612
+            }
+        },
+        "tained_length": {},
+        "sink_info": {
+            "strcpy": 17,
+            "strncpy": 0,
+            "memcpy": 0,
+            "memmove": 0,
+            "sprintf": 67,
+            "sscanf": 0,
+            "strcat": 1,
+            "strncat": 0,
+            "system": 18,
+            "popen": 3,
+            "execve": 0,
+            "_system": 36
+        }
+    }
+}

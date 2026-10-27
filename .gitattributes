@@ -1,0 +1,23 @@
+# 自动识别文本文件
+* text=auto
+
+# Python
+*.py text eol=lf
+
+# Linux Shell
+*.sh text eol=lf
+
+# 配置文件
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+
+# Windows 脚本
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# 二进制文件
+*.exe binary
+*.dll binary
+*.so binary

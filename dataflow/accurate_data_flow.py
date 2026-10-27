@@ -371,7 +371,7 @@ class AccurateDataFlow(EngineVEX):
             # print("guard-info: %s %s %s %s" % (succ_block, cmp_op, guard_var, cmp_var))
 
             if cmp_op and 'g' in cmp_op and not succ_block.is_loop:
-                print("ooh, found loop copy length constriant: %s" % (cmp_var))
+                # print("ooh, found loop copy length constriant: %s" % (cmp_var))
                 if type(cmp_var) is str:
                     cons_expr = self._create_constraint_expr(block, cmp_var, code_location.stmt_idx, code_location.stmt_idx)
                     cons_expr.expr.cons_type = 3
@@ -428,7 +428,7 @@ class AccurateDataFlow(EngineVEX):
             # print("guard-info: %s %s %s %s" % (succ_block, cmp_op, guard_var, cmp_var))
 
             if cmp_op and ('g' in cmp_op or cmp_op == 'eq') and not succ_block.is_loop:
-                print("ooh, found loop copy length constriant(A): %s" % (cmp_var))
+                # print("ooh, found loop copy length constriant(A): %s" % (cmp_var))
                 if type(cmp_var) is str:
                     cons_expr = self._create_constraint_expr(block, cmp_var, code_location.stmt_idx, code_location.stmt_idx)
                     cons_expr.expr.cons_type = 3
@@ -904,7 +904,7 @@ class AccurateDataFlow(EngineVEX):
             new_expr.expr.flag |= 0x200
             new_expr.expr.trace_dir = 'B'
         else:
-            print("Found loop copy(1): %s %s" % (code_location, new_expr))
+            # print("Found loop copy(1): %s %s" % (code_location, new_expr))
             new_expr.loop_num += 1
         new_exprs.append(new_expr)
 
@@ -1730,7 +1730,7 @@ class AccurateDataFlow(EngineVEX):
             new_expr.expr.cons_type = 6
             new_expr.expr.trace_dir = 'F'
             new_exprs.append(new_expr)
-            print("Lucky-v2-> %s %s" % (code_location, new_expr))
+            # print("Lucky-v2-> %s %s" % (code_location, new_expr))
 
         return new_exprs
 
@@ -1781,7 +1781,7 @@ class AccurateDataFlow(EngineVEX):
             new_expr.expr.cons_type = 6
             new_expr.expr.trace_dir = 'F'
             new_exprs.append(new_expr)
-            print("Lucky-v1-> %s %s" % (code_location, new_expr))
+            # print("Lucky-v1-> %s %s" % (code_location, new_expr))
 
         return new_exprs
 
@@ -1819,7 +1819,7 @@ class AccurateDataFlow(EngineVEX):
             new_expr.index = code_location.stmt_idx
             new_expr.expr.trace_dir = 'F'
             new_exprs.append(new_expr)
-            print("xpp-> %s" % (new_expr))
+            # print("xpp-> %s" % (new_expr))
         return new_exprs
 
     def _find_binop_pointer_v2(self, wr_tmp, wr_info, code_location, trace_expr):
@@ -2487,16 +2487,16 @@ class AccurateDataFlow(EngineVEX):
             if len(new_exprs):
                 block.forward_exprs.extend(new_exprs)
                 block.is_tainted = 1
-                for new_expr in new_exprs:
-                    print("psu-debug: get new expr (1) %s, cons-ids: %s %s" % (new_expr, new_expr.cons_ids, new_expr.guard))
+                # for new_expr in new_exprs:
+                #     print("psu-debug: get new expr (1) %s, cons-ids: %s %s" % (new_expr, new_expr.cons_ids, new_expr.guard))
 
         if len(f_reg_alias) and (update_type is None or update_type == 'reg'):
             new_exprs = self._forward_update_reg_alias(trace_expr, f_reg_alias)
             if len(new_exprs):
                 block.forward_exprs.extend(new_exprs)
                 block.is_tainted = 1
-                for new_expr in new_exprs:
-                    print("psu-debug: get new expr (2) %s, cons-ids: %s" % (new_expr, new_expr.cons_ids))
+                # for new_expr in new_exprs:
+                #     print("psu-debug: get new expr (2) %s, cons-ids: %s" % (new_expr, new_expr.cons_ids))
 
     # Kai code!
     def update_put_alias_in_backward(self, block, trace_expr):
@@ -2533,8 +2533,8 @@ class AccurateDataFlow(EngineVEX):
 
             if len(new_forward_exprs):
                 block.forward_exprs.extend(new_forward_exprs)
-                for new_expr in new_forward_exprs:
-                    print("Add new forward (B1): %s" % (new_expr))
+                # for new_expr in new_forward_exprs:
+                #     print("Add new forward (B1): %s" % (new_expr))
                 new_forward_exprs.clear()
 
         b_reg_alias = block.b_reg_alias
@@ -2574,7 +2574,7 @@ class AccurateDataFlow(EngineVEX):
 
             else:
                 block.forward_exprs.append(new_expr)
-                print("Add new forward (B2): %s ptr-id: %x" % (new_expr, new_expr.expr.ptr_id))
+                # print("Add new forward (B2): %s ptr-id: %x" % (new_expr, new_expr.expr.ptr_id))
                 # new_expr.print_sims()
 
     # Kai code!
@@ -2613,10 +2613,10 @@ class AccurateDataFlow(EngineVEX):
             l.debug("This action type %s is not support!" % (action_type))
             new_forward_exprs  =[]
 
-        if len(new_forward_exprs):
-            print("\nForward: %s" % (code_location))
-            for new_expr in new_forward_exprs:
-                print("new expr %s %s\n" % (new_expr, new_expr.expr.sims))
+        # if len(new_forward_exprs):
+        #     print("\nForward: %s" % (code_location))
+        #     for new_expr in new_forward_exprs:
+        #         print("new expr %s %s\n" % (new_expr, new_expr.expr.sims))
 
         #         for i, sim_action in new_expr.expr.sim_actions.items():
         #             print("sim action: %d %s" % (i, sim_action))
@@ -2639,11 +2639,11 @@ class AccurateDataFlow(EngineVEX):
         actions = block.actions
 
         # DEBUG
-        print("Forward trace: %s" % (block))
-        for fe in forward_exprs:
-            print("  %s 0x%x with-cons- %s ptr-id- %x source- %s alias_id- %s-%s" %
-                  (fe, fe.expr.flag, fe.constraints, fe.expr.ptr_id, fe.expr.source, fe.expr.data_type, fe.expr.alias_id))
-            print("      --> cons-ids: %s, taint-src: %x" % (fe.cons_ids, fe.expr.taint_source))
+        # print("Forward trace: %s" % (block))
+        # for fe in forward_exprs:
+        #     print("  %s 0x%x with-cons- %s ptr-id- %x source- %s alias_id- %s-%s" %
+        #           (fe, fe.expr.flag, fe.constraints, fe.expr.ptr_id, fe.expr.source, fe.expr.data_type, fe.expr.alias_id))
+        #     print("      --> cons-ids: %s, taint-src: %x" % (fe.cons_ids, fe.expr.taint_source))
             # print("      --> inter-funcs: %s" % (fe.inter_funcs))
             # for action in fe.expr.sim_actions.values():
             #     print("     -> %s %s" % (action, action.def_locs))
@@ -2731,11 +2731,11 @@ class AccurateDataFlow(EngineVEX):
         self._backward_update_put_def(block, live_defs, backward_exprs, reg_defs, alive_exprs)
 
         # Debug
-        print("Backward trace: %s" % (block))
-        for b_expr in backward_exprs:
-            print("  %s 0x%x with-cons- %s ptr-id- %x source- %s alias_id- %s-%s"
-                  % (b_expr, b_expr.expr.flag, b_expr.constraints, b_expr.expr.ptr_id, b_expr.expr.source, b_expr.expr.data_type, b_expr.expr.alias_id))
-            print("      --> cons-ids: %s" % (b_expr.cons_ids))
+        # print("Backward trace: %s" % (block))
+        # for b_expr in backward_exprs:
+        #     print("  %s 0x%x with-cons- %s ptr-id- %x source- %s alias_id- %s-%s"
+        #           % (b_expr, b_expr.expr.flag, b_expr.constraints, b_expr.expr.ptr_id, b_expr.expr.source, b_expr.expr.data_type, b_expr.expr.alias_id))
+        #     print("      --> cons-ids: %s" % (b_expr.cons_ids))
             # print("      --> inter-funcs: %s" % (b_expr.inter_funcs))
             # for action in b_expr.expr.sim_actions.values():
             #     print("     -> %s %s" % (action, action.def_locs))
@@ -2835,10 +2835,10 @@ class AccurateDataFlow(EngineVEX):
             l.debug("This action type %s is not support!\n %s" % (action_type, action))
             new_backward_exprs = []
 
-        if len(new_backward_exprs):
-            print("\nBackward: %s" % (code_location))
-            for new_expr in new_backward_exprs:
-                print("new expr %s, flag: %x" % (new_expr, new_expr.expr.flag))
+        # if len(new_backward_exprs):
+        #     print("\nBackward: %s" % (code_location))
+        #     for new_expr in new_backward_exprs:
+        #         print("new expr %s, flag: %x" % (new_expr, new_expr.expr.flag))
 
         #         for index, sim_action in new_expr.expr.sim_actions.items():
         #             print("sim_action: %d %s" % (index, sim_action))
@@ -3116,6 +3116,9 @@ class AccurateDataFlow(EngineVEX):
         ins_len = len(block.irsb.statements)
         # update_info = []
 
+        # print("live-defs: %s" % (live_defs))
+        # print("reg_defs: %s" % (reg_defs))
+
         for trace_expr in backward_exprs:
             # print("oooo-> %s" % (trace_expr))
             trace_sims = trace_expr.expr.sims
@@ -3137,7 +3140,7 @@ class AccurateDataFlow(EngineVEX):
 
                 if new_expr is None:
                     continue
-                print("b-put-newexpr:\n  old %s %s\n  new %s %s" % (trace_expr, trace_expr.inter_funcs, new_expr, new_expr.inter_funcs))
+                # print("b-put-newexpr:\n  old %s %s\n  new %s %s" % (trace_expr, trace_expr.inter_funcs, new_expr, new_expr.inter_funcs))
 
                 block.is_tainted = 1
                 new_exprs.append(new_expr)
@@ -3145,7 +3148,7 @@ class AccurateDataFlow(EngineVEX):
                 if trace_expr.expr.flag & 0x200 and (not new_expr.expr.flag & 0x200):
                     new_forward_exprs.append(new_expr)
                     new_expr.loop_num += 1
-                    print("Found loop copy %s" % (new_expr))
+                    # print("Found loop copy %s" % (new_expr))
 
         for new_expr in new_exprs:
             # if new_expr.expr.data_type == 'Aptr' and is_filter_v3(new_expr.expr.ast):

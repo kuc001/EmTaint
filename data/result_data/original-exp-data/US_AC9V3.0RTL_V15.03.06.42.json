@@ -1,0 +1,1200 @@
+{
+    "icall": {
+        "time": "204.554985",
+        "all_icall": 88,
+        "recovered_icall": 65,
+        "min_tartet_num": 1,
+        "max_tartet_num": 204,
+        "add_icall_target": 286
+    },
+    "taint_0": {
+        "time": "110.613932",
+        "all_functions": 1418,
+        "analyzed_functions": 905,
+        "all_blocks": 33612,
+        "tainted_blocks": 2001,
+        "tainted_sinks": 42,
+        "buffer_overflow_num": 0,
+        "command_exec_num": 0,
+        "buffer_overflow": {},
+        "command_exec": {},
+        "tained_length": {},
+        "sink_info": {
+            "strcpy": 0,
+            "strncpy": 0,
+            "memcpy": 0,
+            "memmove": 0,
+            "sprintf": 0,
+            "sscanf": 0,
+            "strcat": 0,
+            "strncat": 0,
+            "system": 0,
+            "popen": 0,
+            "execve": 0,
+            "_system": 0
+        }
+    },
+    "taint_1": {
+        "time": "433.621871",
+        "all_functions": 1418,
+        "analyzed_functions": 1201,
+        "all_blocks": 42490,
+        "tainted_blocks": 6056,
+        "tainted_sinks": 172,
+        "buffer_overflow_num": 84,
+        "command_exec_num": 0,
+        "buffer_overflow": {
+            "47e2e0": {
+                "name": "sprintf",
+                "offset": [
+                    1564
+                ],
+                "info": [
+                    5,
+                    1,
+                    1,
+                    0
+                ],
+                "func": 4710668
+            },
+            "47c0e4": {
+                "name": "strcpy",
+                "offset": [
+                    1160
+                ],
+                "info": [
+                    5,
+                    1,
+                    2,
+                    0
+                ],
+                "func": 4702260
+            },
+            "47d034": {
+                "name": "strcpy",
+                "offset": [
+                    1100
+                ],
+                "info": [
+                    5,
+                    1,
+                    3,
+                    0
+                ],
+                "func": 4704460
+            },
+            "47d058": {
+                "name": "strcpy",
+                "offset": [
+                    1036
+                ],
+                "info": [
+                    5,
+                    1,
+                    4,
+                    0
+                ],
+                "func": 4704460
+            },
+            "47a004": {
+                "name": "strcpy",
+                "offset": [
+                    1172
+                ],
+                "info": [
+                    10,
+                    2,
+                    5,
+                    0
+                ],
+                "func": 4693724
+            },
+            "4a4b6c": {
+                "name": "strcpy",
+                "offset": [
+                    600
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4868612
+            },
+            "4a4c6c": {
+                "name": "sprintf",
+                "offset": [
+                    856
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4868612
+            },
+            "4e8e14": {
+                "name": "strcpy",
+                "offset": [
+                    444
+                ],
+                "info": [
+                    25,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 5147544
+            },
+            "4e8e38": {
+                "name": "strcpy",
+                "offset": [
+                    476
+                ],
+                "info": [
+                    25,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 5147544
+            },
+            "4edaf0": {
+                "name": "sprintf",
+                "offset": [
+                    348
+                ],
+                "info": [
+                    26,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 5167048
+            },
+            "471738": {
+                "name": "sprintf",
+                "offset": [
+                    72
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4658208
+            },
+            "4b44d0": {
+                "name": "sprintf",
+                "offset": [
+                    552
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4932132
+            },
+            "4b0174": {
+                "name": "strcpy",
+                "offset": [
+                    2640
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4912740
+            },
+            "4b06a0": {
+                "name": "strcpy",
+                "offset": [
+                    2896
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4912740
+            },
+            "48f6c8": {
+                "name": "sscanf",
+                "offset": [
+                    60,
+                    28,
+                    44,
+                    36
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4780848
+            },
+            "48f718": {
+                "name": "sprintf",
+                "offset": [
+                    316
+                ],
+                "info": [
+                    23,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4780848
+            },
+            "48f814": {
+                "name": "sscanf",
+                "offset": [
+                    60,
+                    28,
+                    44,
+                    36
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4780848
+            },
+            "48f864": {
+                "name": "sprintf",
+                "offset": [
+                    316
+                ],
+                "info": [
+                    23,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4780848
+            },
+            "493980": {
+                "name": "sprintf",
+                "offset": [
+                    780
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4798640
+            },
+            "493a00": {
+                "name": "sprintf",
+                "offset": [
+                    1036
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4798640
+            },
+            "4987d4": {
+                "name": "strcpy",
+                "offset": [
+                    2236
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4818452
+            },
+            "49886c": {
+                "name": "sscanf",
+                "offset": [
+                    916,
+                    1972,
+                    884,
+                    900
+                ],
+                "info": [
+                    23,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4818452
+            },
+            "498824": {
+                "name": "sscanf",
+                "offset": [
+                    916,
+                    1972,
+                    1980,
+                    900
+                ],
+                "info": [
+                    23,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4818452
+            },
+            "4985cc": {
+                "name": "sprintf",
+                "offset": [
+                    268
+                ],
+                "info": [
+                    24,
+                    2,
+                    5,
+                    0
+                ],
+                "func": 4818204
+            },
+            "497818": {
+                "name": "sprintf",
+                "offset": [
+                    524
+                ],
+                "info": [
+                    25,
+                    2,
+                    6,
+                    0
+                ],
+                "func": 4814640
+            },
+            "4989e8": {
+                "name": "strcpy",
+                "offset": [
+                    2236
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4818452
+            },
+            "498a80": {
+                "name": "sscanf",
+                "offset": [
+                    916,
+                    1972,
+                    884,
+                    900
+                ],
+                "info": [
+                    23,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4818452
+            },
+            "498a38": {
+                "name": "sscanf",
+                "offset": [
+                    916,
+                    1972,
+                    1980,
+                    900
+                ],
+                "info": [
+                    23,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4818452
+            },
+            "499908": {
+                "name": "sprintf",
+                "offset": [
+                    1032
+                ],
+                "info": [
+                    24,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4822288
+            },
+            "49996c": {
+                "name": "sprintf",
+                "offset": [
+                    392
+                ],
+                "info": [
+                    24,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4822288
+            },
+            "491a10": {
+                "name": "sscanf",
+                "offset": [
+                    84,
+                    52,
+                    36,
+                    68
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4789920
+            },
+            "491ad4": {
+                "name": "sprintf",
+                "offset": [
+                    340
+                ],
+                "info": [
+                    23,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4789920
+            },
+            "491a8c": {
+                "name": "sprintf",
+                "offset": [
+                    340
+                ],
+                "info": [
+                    23,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4789920
+            },
+            "491bd0": {
+                "name": "sscanf",
+                "offset": [
+                    84,
+                    52,
+                    36,
+                    68
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4789920
+            },
+            "491c94": {
+                "name": "sprintf",
+                "offset": [
+                    340
+                ],
+                "info": [
+                    23,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4789920
+            },
+            "491c4c": {
+                "name": "sprintf",
+                "offset": [
+                    340
+                ],
+                "info": [
+                    23,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4789920
+            },
+            "4d747c": {
+                "name": "sscanf",
+                "offset": [
+                    332,
+                    316,
+                    308,
+                    324
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 5075652
+            },
+            "4d74ac": {
+                "name": "sprintf",
+                "offset": [
+                    300
+                ],
+                "info": [
+                    22,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 5075652
+            },
+            "4d74dc": {
+                "name": "sprintf",
+                "offset": [
+                    172
+                ],
+                "info": [
+                    22,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 5075652
+            },
+            "45af2c": {
+                "name": "sprintf",
+                "offset": [
+                    340
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4566028
+            },
+            "45afe4": {
+                "name": "sprintf",
+                "offset": [
+                    340
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4566028
+            },
+            "45b05c": {
+                "name": "sprintf",
+                "offset": [
+                    340
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4566028
+            },
+            "45b0e0": {
+                "name": "sprintf",
+                "offset": [
+                    340
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4566028
+            },
+            "45b1ac": {
+                "name": "sprintf",
+                "offset": [
+                    340
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4566028
+            },
+            "45acf8": {
+                "name": "sprintf",
+                "offset": [
+                    340
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4566028
+            },
+            "45ada0": {
+                "name": "sprintf",
+                "offset": [
+                    340
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4566028
+            },
+            "45ae6c": {
+                "name": "sprintf",
+                "offset": [
+                    340
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4566028
+            },
+            "4ba1b4": {
+                "name": "sprintf",
+                "offset": [
+                    20
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4955876
+            },
+            "4bb8d4": {
+                "name": "sprintf",
+                "offset": [
+                    288
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4961516
+            },
+            "4bb7b4": {
+                "name": "sprintf",
+                "offset": [
+                    288
+                ],
+                "info": [
+                    23,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4961516
+            },
+            "4a7a10": {
+                "name": "strcpy",
+                "offset": [
+                    752
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4880112
+            },
+            "4a79d8": {
+                "name": "strcpy",
+                "offset": [
+                    752
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4880112
+            },
+            "4a7afc": {
+                "name": "sscanf",
+                "offset": [
+                    328,
+                    360,
+                    392
+                ],
+                "info": [
+                    22,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4880112
+            },
+            "4a7bd8": {
+                "name": "sprintf",
+                "offset": [
+                    560
+                ],
+                "info": [
+                    22,
+                    2,
+                    5,
+                    0
+                ],
+                "func": 4880112
+            },
+            "4780a8": {
+                "name": "strcpy",
+                "offset": [
+                    816
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4685592
+            },
+            "4780cc": {
+                "name": "strcpy",
+                "offset": [
+                    752
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4685592
+            },
+            "478768": {
+                "name": "sscanf",
+                "offset": [
+                    32,
+                    28
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4685592
+            },
+            "478834": {
+                "name": "strcpy",
+                "offset": [
+                    36
+                ],
+                "info": [
+                    22,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4685592
+            },
+            "490224": {
+                "name": "sprintf",
+                "offset": [
+                    264
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4784432
+            },
+            "4c469c": {
+                "name": "strcpy",
+                "offset": [
+                    312
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4991292
+            },
+            "4c3afc": {
+                "name": "strcpy",
+                "offset": [
+                    352
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4991292
+            },
+            "4aabc8": {
+                "name": "strcpy",
+                "offset": [
+                    25
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4892480
+            },
+            "4aabf0": {
+                "name": "strcpy",
+                "offset": [
+                    25
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4892480
+            },
+            "4a1338": {
+                "name": "sscanf",
+                "offset": [
+                    76,
+                    44
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4853596
+            },
+            "49f594": {
+                "name": "strcpy",
+                "offset": [
+                    524
+                ],
+                "info": [
+                    23,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4846424
+            },
+            "49fc3c": {
+                "name": "sprintf",
+                "offset": [
+                    2712
+                ],
+                "info": [
+                    23,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 4846424
+            },
+            "49f934": {
+                "name": "sprintf",
+                "offset": [
+                    2712
+                ],
+                "info": [
+                    23,
+                    2,
+                    5,
+                    0
+                ],
+                "func": 4846424
+            },
+            "49f7fc": {
+                "name": "sprintf",
+                "offset": [
+                    2712
+                ],
+                "info": [
+                    23,
+                    2,
+                    5,
+                    0
+                ],
+                "func": 4846424
+            },
+            "4a1508": {
+                "name": "strcpy",
+                "offset": [
+                    596
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4853596
+            },
+            "4a1530": {
+                "name": "strcpy",
+                "offset": [
+                    596
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4853596
+            },
+            "4a16e4": {
+                "name": "strcpy",
+                "offset": [
+                    596
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4853596
+            },
+            "4a1434": {
+                "name": "strcpy",
+                "offset": [
+                    596
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4853596
+            },
+            "4a8b14": {
+                "name": "sscanf",
+                "offset": [
+                    100,
+                    136,
+                    76,
+                    112,
+                    88,
+                    124
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4883812
+            },
+            "4a87b0": {
+                "name": "strcpy",
+                "offset": [
+                    192
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4883812
+            },
+            "4a8784": {
+                "name": "sscanf",
+                "offset": [
+                    192,
+                    176
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4883812
+            },
+            "4a89b8": {
+                "name": "strcpy",
+                "offset": [
+                    452
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4883812
+            },
+            "49ea78": {
+                "name": "strcpy",
+                "offset": [
+                    596
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4843924
+            },
+            "4dc3e4": {
+                "name": "sscanf",
+                "offset": [
+                    364,
+                    356,
+                    372,
+                    348
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 5095388
+            },
+            "4dc440": {
+                "name": "sscanf",
+                "offset": [
+                    340,
+                    324,
+                    316,
+                    332
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 5095388
+            },
+            "4dc4ac": {
+                "name": "sprintf",
+                "offset": [
+                    692
+                ],
+                "info": [
+                    22,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 5095388
+            },
+            "4dc4f8": {
+                "name": "sprintf",
+                "offset": [
+                    564
+                ],
+                "info": [
+                    22,
+                    2,
+                    4,
+                    0
+                ],
+                "func": 5095388
+            },
+            "4dc52c": {
+                "name": "sprintf",
+                "offset": [
+                    500
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 5095388
+            },
+            "471324": {
+                "name": "sprintf",
+                "offset": [
+                    568
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 4657116
+            },
+            "4d0a44": {
+                "name": "strcpy",
+                "offset": [
+                    720
+                ],
+                "info": [
+                    22,
+                    2,
+                    3,
+                    0
+                ],
+                "func": 5048312
+            }
+        },
+        "command_exec": {},
+        "tained_length": {},
+        "sink_info": {
+            "strcpy": 29,
+            "strncpy": 0,
+            "memcpy": 0,
+            "memmove": 0,
+            "sprintf": 39,
+            "sscanf": 16,
+            "strcat": 0,
+            "strncat": 0,
+            "system": 0,
+            "popen": 0,
+            "execve": 0,
+            "_system": 0
+        }
+    }
+}

@@ -36,9 +36,6 @@ result_save_path = os.path.join(current_path, config.get('result_config', 'RESUL
 firmware_info_path = ''
 
 
-# Global Nmae
-_save_path = '/home/kai/Work/angr-work/exp_data/'
-
 def load_binary(binary):
     proj = angr.Project(binary,
                         default_analysis_mode='symbolic',
@@ -54,28 +51,28 @@ def re_construct_cfg(collector, binary_cfg_info_path, binary_block_info_path):
     blocks_record = json.load(open(binary_block_info_path, 'r'))
 
     for funcea, icall_info in collector.icall_targets.items():
-        print("Function: %x" % (funcea))
+        # print("Function: %x" % (funcea))
         funcea_s = '%x' % (funcea)
         func_cfg_record = cfg_record[funcea_s]
         func_block_record = blocks_record[funcea_s]
 
-        print(func_cfg_record)
-        print(func_block_record)
+        # print(func_cfg_record)
+        # print(func_block_record)
 
         call_info = func_cfg_record['call']
 
         for loc, targets in icall_info.items():
             block_addr_s = '%s' % (loc.block_addr)
 
-            if block_addr_s in func_block_record:
-                print("Found, %s %s" % (loc, func_block_record[block_addr_s]))
+            # if block_addr_s in func_block_record:
+            #     print("Found, %s %s" % (loc, func_block_record[block_addr_s]))
 
 
 def save_icall_info(binary_name, collector):
     icall_info_path = os.path.join(firmware_info_path, '%s_icall.json' % (binary_name))
-    print("Icall-save: %s" % (icall_info_path))
+    # print("Icall-save: %s" % (icall_info_path))
     icall_targets = collector.icall_targets
-    print(icall_targets)
+    # print(icall_targets)
     json.dump(icall_targets, open(icall_info_path, 'w'), indent=4)
 
 def save_icall_statistics(ida_object, collector, statistics_path, result_statistics):
@@ -94,15 +91,15 @@ def save_icall_statistics(ida_object, collector, statistics_path, result_statist
                 min_target = targets_len
             if targets_len > max_target:
                 max_target = targets_len
-            print("Resolved icall in %x" % (addr))
+            # print("Resolved icall in %x" % (addr))
         recovered_icall_num += len(icall_info)
 
-    for icall in all_icalls:
-        if icall not in recovered_icalls:
-            print("Non-recovery-icall in %x" % (icall))
+    # for icall in all_icalls:
+    #     if icall not in recovered_icalls:
+    #         print("Non-recovery-icall in %x" % (icall))
 
-    print("Binary has icalls: %d" % (len(all_icalls)))
-    print("Recovered icalls: %d" % (recovered_icall_num))
+    # print("Binary has icalls: %d" % (len(all_icalls)))
+    # print("Recovered icalls: %d" % (recovered_icall_num))
     result_statistics['icall']['all_icall'] = len(all_icalls)
     result_statistics['icall']['recovered_icall'] = recovered_icall_num
     result_statistics['icall']['min_tartet_num'] = min_target
@@ -220,9 +217,9 @@ def save_taint_statistics(ida_object, security_engine, statistics_path, result_s
 
 def save_switch_info(binary_name, collector):
     switch_info_path = os.path.join(firmware_info_path, '%s_ijmp.json' % (binary_name))
-    print("Switch-save: %s" % (switch_info_path))
+    # print("Switch-save: %s" % (switch_info_path))
     switch_targets = collector.switch_targets
-    print(switch_targets)
+    # print(switch_targets)
     json.dump(switch_targets, open(switch_info_path, 'w'), indent=4)
 
 
@@ -412,311 +409,8 @@ def perform_analysis(binary,
                      debug=False,
                      load_ida_bytes=False):
 
-    # DEBUG
-    # '34b710', '30a680', '34b3b0'
-    # '280510', '2839d0', '334e50'
     analyzed_time_start = time.time()
     functions = []
-    # functions = ['278e00', '3e0370']
-    # functions = ['3e0700', '293f10']
-    # functions = ['265980', '409ab0']
-    # functions = ['27ec60', '27e230']
-    # functions = ['2f2810']
-    # functions = ['364140']
-    # functions = ['382ab0', '384730']
-    # functions = ['38d870']
-    # functions = ['2bc3d0']
-    # functions = ['293f10']
-    # functions = ['40aca0']
-    # functions = ['2e3060']
-    # functions = ['364140']
-    # functions = ['3e09d0']
-    # functions = ['380da0']
-    # functions = ['2cef90', '40b7e0']
-    # functions = ['4406a0']
-    # functions = ['2d05b0']
-    # functions = ['320fb0']
-    # functions = ['45f230']
-    # functions = ['37ad50']
-    # functions = ['370d70']
-    # functions = ['25a9c0']
-    # functions = ['3d33f0']
-
-    # Trace to ret
-    # functions = ['38a530', '3780d0', '3780c0']
-    # functions = ['376030', '389350', '389340', '388ec0']
-    # functions = ['471af0', '32ffe0']
-    # functions = ['35d7c0', '35d670']
-
-    # Update ret pointer to callsite
-    # functions = ['3302c0']
-
-    # functions = ['44dab0']
-
-    # virtfunc
-    # functions = ['400f9e', '401076', '400e28']
-    # functions = ['4011e0']
-
-    # virtual_inheritance
-    # functions = ['400659']
-
-    # virtual_vtv
-    # functions = ['4009b7']
-
-    # filezilla
-    # functions = ['8b1ac0']
-    # functions = ['a02d50']
-    # functions = ['83f660', '83f7c0']
-    # functions = ['934d20', '9341b0', '989170']
-    # functions = ['8200b0']
-    # functions = ['8200b0']
-    # functions = ['793a90', '790fd0']
-    # functions = ['790fd0']
-    # functions = ['934d20', '793a90', '790fd0']
-    # functions = ['793a90', '790fd0']
-    # functions = test_loop_function()
-    # functions = ['759030']
-    # functions = ['a03db0', 'a03d50', 'a06b80', 'a06c30']
-    # functions = ['a03db0', 'a03d50', 'a06b80']
-    # functions = ['8cab50', '912e70', '8cd430']
-    # functions = ['7609c0', '803fb0', '8cd010', '7e1d40', '82c810', '7e25d0']
-    # functions = ['957da0']
-    # functions = ['83a740', '83b2d0']
-    # functions = ['832b00']
-    # functions = ['957da0', '954770']
-
-    # array_alias
-    # functions = ['a33', 'a13']
-
-    # func-ptr-in-class
-    # functions = ['d2c', 'b81']
-
-    # swap-structindirect - test faild
-    # functions = ['9f1', '9b3']
-
-    # function_handle_test
-    # functions = ['c5b', 'b3e', 'bcc']
-    # functions = ['c5b', 'bcc']
-
-    # loops_test
-    # functions = ['9b3']
-    # functions = ['c9f']
-    # functions = ['a36']
-
-    # context-sensitive-1
-    # functions = ['aef', 'e32', '9f1', '6d0', 'ada']
-
-    # constraint-cycle-copy
-    # functions = ['963', '7c4', '7e1', '78a']
-
-    # constraint-cycle-field
-    # functions = ['8f3', '754']
-
-    # Test icall recovery!
-    # virtual_inheritance
-    # functions = ['e3b', 'e5c', '114c']
-    # functions = ['104e']
-
-    # vsftpd
-    # functions = ['40d330']
-    # functions = ['4145d0']
-    # functions = ['40bfc0']
-
-    # httpd (arm)
-    # Icall test
-    # functions = ['1f9a0', '1ea0c']
-    # functions = ['1f9a0', ]
-    # functions = ['25bac', ]
-    # functions = ['2d990', '29590']
-    # functions = ['2d394', '23dc4']
-
-    # Cisco RV130 httpd
-    # functions = ['2bf64', '2c4b0', '2c614', '1d170']
-    # functions = ['1d170']
-    # functions = ['1db6c', '2d228', '1cfb4', '1cf1c']
-    # functions = ['1db6c', '2d228', '1cfb4']
-    # functions = ['1f9a0', '2d228', '1db6c', '2cd44']
-    # functions = ['1d170', '2c614', '2c4b0', '2bf64']
-    # functions = ['11f44']
-    # functions = ['1db6c', '2d228', '1cfb4', '1cf1c', '1f9a0', '2cd44', '2c614', '1d170', '2c4b0', '2bf64']
-    # functions = ['1db6c', '2d228', '1cfb4', '1cf1c', '1f9a0', '2e9b4', '2d990', '2967c', '25bac', '1d170', '4cee0']
-    # functions = ['1cfb4']
-    # functions = ['18d44', '1d170']
-    # functions = ['2a878', '35458', '1d170']
-    # functions = ['52db4', '538c0', '1d170']
-    # functions = ['1de00', '1f9a0']
-    # functions = ['6e230', '1de00']
-    # functions = ['7c064', '7c1d4', '7ca24', '722f8', '25bac', ]
-    # functions = ['4cee0',]
-
-    # openssl-arm
-    # tls1_process_heartbeat, ssl3_read_bytes, ssl3_read_n
-    # functions = ['67c34', '6fb94', '66fcc', 'c7b78']
-    # functions = ['66fcc', 'c7b78']
-    # functions = ['6fb94']
-
-    # 0x2120c -> 0x2d228
-
-    # Schneider WebServer
-    # functions = ['918']
-    # strcpy bug in websSecurityHandler
-    # functions = ['895c']
-    # functions = ['9b88', '937c', '8e0c', '8414', '83c0', '8484', '8874', '88e8', '94d0', '8814', '85dc', '80e0', '80a8', 'ffd8', '8778', '86a8', '9c8', '918', '65f0', '895c', '8074', '7a9c', '7730', 'f268']
-    # functions = ['9b88', '937c', '8e0c', '8414', '83c0', '8484', '8874', '88e8', '94d0', '8814', '85dc', '80e0', '80a8', ]
-    # functions = ['9b88', '937c', '8e0c', '8414', '83c0', '8484', ]
-    # functions = ['86a8', '8484', '85dc', '8778']
-    # functions = ['937c', ]
-    # functions = ['8074', '7a9c']
-    # functions = ['688c']
-    # functions = ['2ebe8', '21074']
-
-    # functions = ['65f0']
-    # functions = ['17254', '6288', '65f0']
-    # functions = ['6288']
-    # functions = ['a924']
-    # functions = ['f268']
-
-    # cisco rv160 mini_httpd
-    # functions = ['1c5b4', '16f60', '1c0f8', '1c75c', '1c13c']
-    # functions = ['1c75c']
-
-    # cisco rv160 admin.cgi
-    # functions = ['1e410', '1e6fc']
-    # functions = ['69694', '1b600', '1a89c', '3254c', '1962c', '18064', '56bf0', '1b7e8', '1b6f8']
-
-    # cisco rv320 ssi.cgi (mips)
-    # functions = ['1201034f0', ]
-    # functions = ['12013a348', '12013a474', '120138d30', '12013b478', '12013b2f4', '120138e24', '12013ae14', '120139fa8', '120139360', '12000f7d8', '12000f634', '12000ec60', '12000be70', '120075ca8', '12005cee0', '12013a72c', '120139ddc', '120139798', '120073df4', '1200c5f88', '1200c4288']
-    # functions = ['12013a348', '12013a474', '120138d30', '12013b478', '12013b2f4', '120138e24', '12013ae14', '120139fa8', '120139360', '12000f7d8', '12000f634', '12000ec60', '12000be70', '12005cee0', '12013a72c', '120139ddc', '120139798', '1200c5f88', '1200c4288']
-    # functions = ['12013a348', '12013a474', '120138d30', '12013b478', '12013b2f4', '120138e24', '12013ae14', '120139fa8', '120139360', '12000f7d8', '12000f634', '12000ec60', '12000be70', '12005cee0', '12013a72c', '120139ddc', '120139798', '1200785a0']
-    # functions = ['12013a348', '12013a474', '120138d30', '12013b478', '12013b2f4', '120138e24', '12013ae14', '120139fa8', '120139360', '12000f7d8']
-    # functions = ['12000f634', '12000ec60', '12000be70', '120075ca8', '12005cee0', '12013a72c', '120139ddc', '120139798', '120073df4']
-    # functions = ['120075ca8','12005cee0', '12013a72c','120139ddc', '120139798', '120073df4']
-    # functions = ['12005cee0', '12013a72c','120139ddc', '120139798', '12009f308']
-    # functions = ['12005cee0', '12013a72c','120139ddc', '120139798', '120075ca8']
-    # functions = ['12005cee0', '12013a72c','120139ddc', '120139798', '1200955d4']
-    # functions = ['1200dc88c','12005cee0', '12013a72c']
-    # functions = ['12005cee0', '12013a72c', '12006cfd4']
-    # functions = ['12009f730']
-    # functions = ['120073df4',]
-    # 1200C342C
-
-    # Trendnet tew-632brp httpd
-    # 407f5c
-    # functions = ['40a4bc', '406504', '405888', '4057bc', '40a108', '406990', '405750', '4124cc']
-    # functions = ['406504', '406990']
-
-    # Trendnet tew-827dru v2.04 ssi
-    # functions = ['441df4', '442604', '4426a4', '4420d0']
-    # functions = ['442204', '42dc48']
-    # functions = ['442204', '4379a4', '437a04', '4378d4', '43793c', '40e390']
-    # functions = ['40b680', '40b7a0', '42dc48', '42f788']
-    # functions = ['43d7f4', '43b8fc']
-    # functions = ['4a52fc', '45c820']
-    # functions = ['43858c']
-    # functions = ['438cbc']
-    # functions = ['439288']
-    # functions = ['43d7f4', '43b8fc']
-    # functions = ['41fecc', '43b8fc', '4a52fc',]
-    # functions = ['40e390', '442204', '437a04', '4378d4']
-    # functions = ['4a5830', '4a52fc', '483618']
-
-    # DIR-825 B-2.10 httpd
-    # functions = ['414134', '4077c0']
-    # functions = ['417280'] # sprintf return value ?
-    # functions = ['431a80', '4243c8']
-    # functions = ['413c60', '4077c0', '42f4d8']
-    # functions = ['426650', '4077c0', '436278']
-    # functions = ['41b6b0', '4077c0']
-    # functions = ['40b32c', '410b20', '4078f8', '40782c', '419dc4', '40bfc4', '4077c0', '413c60']
-
-    # DIR-823G goahead
-    # functions = ['40b1f4', '423f90', '40b740']
-    # functions = ['40ee2c', '41fba4', '40f498']
-    # functions = ['42383c']
-    # functions = ['498974', '49a47c', '49aee4', '49c32c', '402530', '45af28', '45ac00', '461704', '461cb4', '462b1c', '402540', '49ba44']
-    # functions = ['40e550', '40ffc8', '40e144', '41cb7c', '40e7d8', '40d950', '40d1a4', '40d104', '41c488', '40b740', '42383c', ]
-    # icall analysis
-    # functions = ['4110b4', '40a990', '4139a0', '41246c']
-    # functions = ['49f7ec', '402530', '43ed54', '402540', '49ef04', '49e3a4', '49d93c']
-    # functions = ['4097bc', '412360', '412954']
-    # functions = ['49ef04']
-
-    # DGN2200
-    # functions = ['40F9D0', '40d70c', '40adc0', '40b970', '412d00', '41f6a4', '410f3c', '41f538', '40b588']
-
-    # DGN1000
-    # functions = ['413c7c', '413a88', '413908', '41458c', '4137a4', '414440', '408740', '4134dc', '414848', '4129c8', '409d64', '408924', '410ce8', '410eac']
-    # functions = ['413c7c', '413a88', '413908', '41458c', '4137a4', '414440', '408740', '4134dc', '414848', '4129c8', '40fde4', '4267f8']
-
-    # DGN2200v4
-    # functions = ['4a4f74', '4a573c', '4a55c0', '4a573c', '408f90']
-    # functions = ['4140b0', '4143ec', '4914cc']
-    # functions = ['4140b0', '4143ec']
-
-    # R7800
-    # functions = ['3139c']
-    # functions = ['25248', '339a8', '251f0', '33a58']
-
-    # R6400
-    # functions = ['18764', '1cd80']
-    # functions = ['18764', '37058',]
-    # functions = ['18764', '37058', '2c2f8', '19abc', 'fbe0', '14364', 'f414']
-    # functions = ['1ce14', '1c058', ]
-
-    # functions = ['67db8']
-
-    # WNR3500Lv2
-    # functions = ['41bf0c', '41c254']
-    # functions = ['41c070', '427fac']
-    # functions = ['41c070', '4532d0']
-    # functions = ['4532d0']
-
-    # R9000
-    # functions = ['1a7c4']
-    # functions = ['3e868', '1167c', 'c10c', '110ec']
-
-    # R7500v2
-    # functions = ['31634']
-
-    # R8300
-    # functions = ['1a384']
-
-    # functions = ['43e180', '43dc40']
-    # functions = ['1a4ec', '18e08']
-
-    # TP-Link NC260
-    # functions = ['485524', '469de4', '46a060', '46a368', '46a17c', ]
-    # functions = ['4f8dfc', '4f8738', '4f8b7c', '4f894c', '4f8dd0', '46a734', '46a368', '482590', '4f956c']
-    # functions = ['482590', '4f956c', '4591e4', '459c10']
-
-    # functions = ['410ec8', '4123cc', '40fa8c', '4110f4', '410140']
-
-    # US_AC15V1.0BR-v15.03.05.18
-    # functions = ['9f04', '998c', '9c40', 'ad7c', 'b1b0', '9b30', '9de8',]
-
-    # US_WH450AV1BR_V1.0.0.18
-    # functions = ['42fb80', '41758c', '42dcac',]
-
-    # NC260
-    # functions = ['416468']
-
-    # US_AC9V1.0BR_V15.03.05.14/httpd
-    # functions = ['16fe8', '1fc60', '20100', '21070', '1715c', '42478']
-    # functions = ['1c758', '1c84c', '1eb40', '1ae48', '1b420', '1bf70']
-    # functions = ['d4068', 'c786c']
-
-    # DCS-5020L_A1_v1.15.12/alphapd
-    # functions = ['417f4c', '41a618', '41cef4', '41ab90', '41827c', '41a754', '40d014', '414298', '41caac', '414324', '41d980', '4384c4', '436254', '414ccc', '44438c', '4146b8']
-    # functions = ['417f4c', '41a618', '41cef4', '41ab90', '41827c', '41a754', '40d014', '414298', '41caac', '414324', '41d980']
-
-    # DAP-1860_A1_103B03/uhttpd
-    # 40EE2C jalr    $t9 ; system
-    # functions = ['40e7a8', '40a218']
-    # functions = [] # 4A73F0 jalr    $t9
-
-    # MR1043 httpd
-    # functions = ['449c24', '4e4ac8', '50d8fc']
 
     # import_libaries = {
     #     # 'libc.so.0': '/home/kuc822/work/Binaries/rv130/libc.so.0',
@@ -740,25 +434,6 @@ def perform_analysis(binary,
     proj = load_binary(binary)
     initialize_global_config(proj)
 
-    # Setting the code section manually.
-
-    # WebServer
-    # section_regions['.rodata'] = (0x4fb88, 0x61be7)
-    # section_regions['.extern'] = (0x1000000, 0x2000000)
-
-    # TEW827DRU v2.04
-    # section_regions['.text'] = (0x4054a0, 0x4b1f00)
-    # section_regions['.rodata'] = (0x4b1f04, 0x4db790)
-    # section_regions['.data'] = (0x4eb794, 0x5094d4)
-    # section_regions['.bss'] = (0x5094d8, 0x1e5383b)
-
-    # DIR-823G goahead
-    # section_regions['.text'] = (0x401cb0, 0x4a03f4)
-    # section_regions['.rodata'] = (0x4a03f8, 0x4afb9f)
-    # section_regions['.data'] = (0x4afba0, 0x5895ab)
-    # section_regions['.bss'] = (0x5898b8, 0x598763)
-
-
     binary_bytes = load_binary_bytes(binary_name)
 
     binary_parser = BinaryParser(proj, binary_bytes=binary_bytes)
@@ -769,13 +444,6 @@ def perform_analysis(binary,
     libary_objects = {}
     call_graph = CallGraph()
 
-    # functions = ['41dff4', '41d208', '414054', '40769c']
-    # functions = ['414054', '40769c', '412e30', '41d208', '41d418', '41ce18', '412bcc']
-    # functions = ['42b778', '40d67c', '414010', '412e30']
-    # functions = ['1715c', '42478', '21070', '1fc60']
-    # functions = ['503224', '525670', '50d4b4', '502d78', '502bd0', '519a90', '50dda0', '502608', '5036c8', '50d92c', '50d854', '43ac8c', '506118', '50e240']
-    # functions = ['50deb4', '506628', '44d960', '50dda0', '506118', '50d854', '50d840', '50d894', '50da00', '52e224', '525260']
-    # functions = ['15c34', '3b9dc']
     start_funcea = 0x0
     # start_funcea = 0x4384C4
     if start_funcea:
@@ -793,12 +461,6 @@ def perform_analysis(binary,
         debug_ida_object.load_icall_info()
         debug_ida_object.add_icall_edge()
 
-        # function_count = 0
-        # for func in debug_ida_object.cg.graph.nodes():
-        #     function_count += 1
-        #     print(func)
-        # print("All functions number: %d" % (function_count))
-
         start_func = debug_call_graph.get_function_by_addr(start_funcea)
         tree_nodes = debug_call_graph.get_all_nodes_by_root(start_func)
         for func in tree_nodes:
@@ -807,8 +469,7 @@ def perform_analysis(binary,
             funcea_hex = '%x' % (func.addr)
             functions.append(funcea_hex)
             print(funcea_hex)
-        # functions.append('12000f7d8')
-        print(len(functions))
+        # print(len(functions))
         # return
 
 
@@ -878,37 +539,13 @@ def perform_analysis(binary,
     print("Analyzed all functions number: %d" % (len(ida_object.cg._nodes)))
 
     blocks_data_info = ida_object.collect_blocks_info()
-    # print(blocks_data_info)
-
-    # for node in ida_object.ida_cfg.graph.nodes():
-    #     print("xxx-> %s" % (node))
-    # return
-
-    # data_parser = DataParser(binary_parser, blocks_data_info)
-
-    # cfg.print_cfg_graph()
-    # cfg.print_cg_graph()
-
-    # DEBUG
-    # test_start_functions = [0x82c810]
-    # test_start_functions = [0x7e8090]
-    # test_start_functions = [0x912e70]
     start_functions = []
-    # for funcea in test_start_functions:
-    #     start_func = ida_object.cg._nodes[funcea]
-    #     start_functions.append(start_func)
-
-    # start_functions = []
-    # print("start functions: %s" % (start_functions))
-
-    # for node in ida_object.ida_cfg.graph.nodes():
-    #     print("xxx-> %s" % (node))
 
     user_search_locatons = {}
     # user_search_locatons = custom_user_search()
 
-    # user_sinks = {}
-    user_sinks = custom_sink()
+    user_sinks = {}
+    # user_sinks = custom_sink()
 
     fast_dataflow = FastDataFlow(proj)
     accurate_dataflow = AccurateDataFlow(proj, icall_check=icall_check, taint_check=taint_check)
@@ -959,17 +596,6 @@ def perform_analysis(binary,
         total_time = '%lf' % (time.time() - analyzed_time_start)
         result_statistics[taint_name]['time'] = total_time
         save_taint_statistics(ida_object, security_engine, statistics_path, result_statistics, resolve_icall)
-
-    # for funcea in collector.analyzed_functions:
-    #     print("0x%x " % (funcea))
-    # from dataflow.sim_procedure import nvram_values
-    # print(nvram_values)
-
-    # for function in ida_object.cg.graph.nodes():
-    #     print("\nFUNC %s has:" % (function))
-    #     for addr in function.global_addrs:
-    #         print("  --> %x" % (addr))
-
 
 def main():
     parser = argparse.ArgumentParser(description="Firmware Binary Static Analysis Tool.")
