@@ -1,23 +1,128 @@
-*.pyc
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python build/package
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# pytest / coverage / mypy
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# =========================
+# C / C++
+# =========================
+# Object files
 *.o
-*.so
-*.a
-.gdb_history
-*.i64
-*.idb
-*.id0
-*.id1
-*.id2
-*.nam
-*.til
-*.swp
-*.dll
 *.obj
+*.lo
+
+# Libraries
+*.a
 *.lib
-*.exp
+*.so
+*.so.*
+*.dll
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug files
 *.pdb
 *.ilk
-.idea
-*.egg-info
-.eggs
-*.txt
+*.dSYM/
+
+# Dependency/generated files
+*.d
+*.dep
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# Common build directories
+build/
+Build/
+out/
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+# =========================
+# Visual Studio
+# =========================
+.vs/
+*.user
+*.suo
+*.VC.db
+*.VC.VC.opendb
+
+# =========================
+# VS Code
+# =========================
+# 如果团队需要共享 VS Code 配置，可以删除这一行
+.vscode/
+
+# 或者只忽略个人配置
+# .vscode/settings.json
+# .vscode/launch.json
+
+# =========================
+# OS temporary files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs / temporary files
+# =========================
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# =========================
+# Secrets / local config
+# =========================
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+secrets.json
